@@ -1,0 +1,53 @@
+extends Button
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+onready var settings_options = get_node("/root/Control/MainSettings/OptionButton")
+onready var dock = get_node("/root/Control/HBoxContainer/Area2D/Sprite2")
+onready var debug_pos = get_node("/root/Control/Debug/DockPos")
+
+onready var size_wide = get_node("/root/Control/MainSettings/Button4")
+onready var size_average = get_node("/root/Control/MainSettings/Button5")
+
+onready var beta_label = get_node("/root/Control/Label")
+onready var wip_label = get_node("/root/Control/Label2")
+
+var pos = "middle"
+var display_size = "average"
+
+# Called when the node enters the scene tree for the first time.
+func _pressed():
+	if settings_options.text == "Left":
+		if display_size == "wide":
+			dock.position.x = -950
+		elif display_size == "average":
+			dock.position.x = -530
+		pos = "left"
+	elif settings_options.text == "Center":
+		dock.position.x = 37.5
+		pos = "middle"
+	elif settings_options.text == "Right":
+		dock.position.x = 425
+		dock = "right"
+	debug_pos.text = "dock_pos = " + pos
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+func _on_ConfirmationDialog_confirmed():
+	dock.position.x = 37.5
+	debug_pos.text = "dock_pos = middle"
+
+func _on_wide_pressed():
+	display_size = "wide"
+	size_wide.disabled = true
+	size_average.disabled = false
+
+func _on_average_pressed():
+	display_size = "average"
+	size_wide.disabled = false
+	size_average.disabled = true

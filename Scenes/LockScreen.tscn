@@ -1,0 +1,131 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Wallpapers/external-content_upscaled.jpg" type="Texture" id=1]
+[ext_resource path="res://textures/usericon_large.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/SignIn.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/ShutDown.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/SetName.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Setup.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/SignIn2.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/load_game.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/loadSetupName.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/ConfirmName.gd" type="Script" id=10]
+
+[sub_resource type="Theme" id=1]
+Label/colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 105, 233 )
+script = ExtResource( 8 )
+
+[node name="HBoxContainer2" type="VBoxContainer" parent="."]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -132.0
+margin_top = -42.0
+margin_right = 104.0
+margin_bottom = -19.0
+rect_scale = Vector2( 1, 0.996516 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Rkv9Cos8" type="Sprite" parent="HBoxContainer2"]
+position = Vector2( 122.871, 12.5437 )
+scale = Vector2( 0.897866, 0.783135 )
+texture = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="HBoxContainer2/Rkv9Cos8"]
+anchor_left = 0.621
+anchor_top = 0.385
+anchor_right = 0.621
+anchor_bottom = 0.385
+margin_left = -1425.98
+margin_top = -698.22
+margin_right = -1370.98
+margin_bottom = -669.22
+text = "Sign in"
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="HBoxContainer2/Rkv9Cos8"]
+position = Vector2( 0.143539, -115.965 )
+scale = Vector2( 1.40353, 1.56656 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="HBoxContainer2/Rkv9Cos8"]
+margin_left = -73.364
+margin_top = -40.3635
+margin_right = 75.636
+margin_bottom = -24.3635
+theme = SubResource( 1 )
+text = "User"
+align = 1
+script = ExtResource( 5 )
+
+[node name="TextEdit" type="LineEdit" parent="HBoxContainer2"]
+margin_right = 236.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 7 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.01
+anchor_top = 0.912
+anchor_right = 0.01
+anchor_bottom = 0.912
+margin_left = -0.240001
+margin_top = -0.200012
+margin_right = 119.76
+margin_bottom = 39.8
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+margin_right = 120.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Shut Down"
+script = ExtResource( 4 )
+
+[node name="Setup" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="SetName" type="WindowDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.0
+margin_top = -58.5
+margin_right = 168.0
+margin_bottom = 58.5
+window_title = "Setup"
+script = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="SetName"]
+margin_left = 8.0
+margin_top = 14.0
+margin_right = 143.0
+margin_bottom = 28.0
+text = "Please enter a name."
+
+[node name="Button" type="Button" parent="SetName"]
+margin_left = 8.0
+margin_top = 81.0
+margin_right = 78.0
+margin_bottom = 109.0
+text = "Confirm"
+script = ExtResource( 10 )
+
+[node name="LineEdit" type="LineEdit" parent="SetName"]
+margin_left = 8.0
+margin_top = 40.0
+margin_right = 328.0
+margin_bottom = 72.0
