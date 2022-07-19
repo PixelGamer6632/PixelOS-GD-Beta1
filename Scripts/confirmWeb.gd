@@ -22,6 +22,6 @@ func _on_Button2_pressed():
 
 func _on_WebWarning_confirmed():
 	if selected_site == "Source":
-		OS.shell_open("https://github.com/PixelGamer6632/pixelos-gd")
+		OS.shell_open("https://github.com/PixelGamer6632/PixelOS-GD-Beta1")
 	elif selected_site == "Repository":
-		OS.shell_open("https://github.com/PixelGamer6632/pixelos-gd")
+		OS.shell_open("https://github.com/PixelGamer6632/PixelOS-GD-Beta1")

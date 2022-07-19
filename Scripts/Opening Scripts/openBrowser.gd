@@ -1,9 +1,5 @@
 extends Button
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 onready var browser = get_node("/root/Control/Browser")
 onready var eveulusearch_bar = get_node("/root/Control/Browser/LineEdit2")
 onready var eveulusearch_button = get_node("/root/Control/Browser/Button3")
@@ -56,11 +52,6 @@ func _process(delta):
 		browser_tm.visible = false
 		browser_usage.visible = false
 		browser_timer.stop()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 
 func _on_Alert_Tabs_confirmed():
 	warned = 1

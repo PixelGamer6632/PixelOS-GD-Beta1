@@ -96,6 +96,7 @@ text = "Confirm"
 script = ExtResource( 7 )
 
 [node name="MainSetup" type="WindowDialog" parent="."]
+visible = true
 margin_left = 275.0
 margin_top = 114.0
 margin_right = 708.0

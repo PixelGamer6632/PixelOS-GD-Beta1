@@ -2,6 +2,7 @@ extends WindowDialog
 
 var display = ""
 var equasion = 0
+var equasion_type = ""
 var finalize = 0
 var num1 = 0
 var num2 = 0
@@ -55,19 +56,76 @@ func _on_Clear_pressed():
 
 func _on_Add_pressed():
 	display += "+"
+	equasion_type = "Addition"
 	$Display.text = display
 	$Add.disabled = true
+	$Subtract.disabled = false
 
 func _on_0_pressed():
 	display += "0"
 	$Display.text = display
 
-func _on__pressed():
-	equasion = display.split("+") # Splits up the numbers in the equasion into an array.
+func sum(symbol):
+	equasion = display.split(symbol) # Splits up the numbers in the equasion into an array.
 	num1 = int(equasion[0])
 	num2 = int(equasion[1])
-	finalize = num1 + num2
-	display = str(finalize)
-	$Display.text = str(finalize)
-	$Label.text = str(num1) + " + " + str(num2) + " = " + str(finalize) # Converts num1 and num2 to a string, than adds them.
+	
+func reset_symbols():
 	$Add.disabled = false
+	$Subtract.disabled = false
+	$Multiply.disabled = false
+	$Divide.disabled = false
+
+func _on__pressed():
+	if equasion_type == "Addition":
+		sum("+")
+		finalize = num1 + num2
+		display = str(finalize)
+		$Display.text = str(finalize)
+		$Label.text = str(num1) + " + " + str(num2) + " = " + str(finalize) # Converts num1 and num2 to a string, than adds them.
+		reset_symbols()
+	if equasion_type == "Subtract":
+		sum("-")
+		finalize = num1 - num2
+		display = str(finalize)
+		$Display.text = str(finalize)
+		$Label.text = str(num1) + " - " + str(num2) + " = " + str(finalize) # Converts num1 and num2 to a string, than adds them.
+		reset_symbols()
+	if equasion_type == "Multiply":
+		sum("x")
+		finalize = num1 * num2
+		display = str(finalize)
+		$Display.text = str(finalize)
+		$Label.text = str(num1) + " x " + str(num2) + " = " + str(finalize) # Converts num1 and num2 to a string, than adds them.
+		reset_symbols()
+	if equasion_type == "Divide":
+		sum("÷")
+		finalize = num1 / num2
+		display = str(finalize)
+		$Display.text = str(finalize)
+		$Label.text = str(num1) + " ÷ " + str(num2) + " = " + str(finalize) # Converts num1 and num2 to a string, than adds them.
+		reset_symbols()
+
+func _on_Subtract_pressed():
+	display += "-"
+	equasion_type = "Subtract"
+	$Display.text = display
+	$Multiply.disabled = true
+	$Add.disabled = true
+	$Divide.disabled = true
+
+func _on_Multiply_pressed():
+	display += "x"
+	equasion_type = "Multiply"
+	$Display.text = display
+	$Multiply.disabled = true
+	$Add.disabled = true
+	$Divide.disabled = true
+
+func _on_Divide_pressed():
+	display += "÷"
+	equasion_type = "Divide"
+	$Display.text = display
+	$Multiply.disabled = true
+	$Add.disabled = true
+	$Divide.disabled = true

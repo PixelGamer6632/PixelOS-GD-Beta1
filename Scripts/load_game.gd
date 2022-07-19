@@ -1,15 +1,10 @@
 extends Control
 
+func _ready():
+	OS.set_window_fullscreen(true)
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-	
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if Input.is_action_pressed("ExitFullScreen"):
+		OS.set_window_fullscreen(false)
+	elif Input.is_action_pressed("EnterFullScreen"):
+		OS.set_window_fullscreen(true)

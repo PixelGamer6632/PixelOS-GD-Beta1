@@ -27,10 +27,6 @@ func _ready():
 func _precess(delta):
 	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 func update_usage(node,max_int,type):
 	node.text = str(randi() % max_int) + type
 

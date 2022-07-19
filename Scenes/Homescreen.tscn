@@ -1,4 +1,4 @@
-[gd_scene load_steps=148 format=2]
+[gd_scene load_steps=157 format=2]
 
 [ext_resource path="res://addons/SliderLabel/SliderLabel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Homescreen Scripts/ApplyPosition.gd" type="Script" id=2]
@@ -18,7 +18,7 @@
 [ext_resource path="res://Scripts/Opening Scripts/openPhotos1.gd" type="Script" id=16]
 [ext_resource path="res://Scripts/Opening Scripts/OpenReadMe.gd" type="Script" id=17]
 [ext_resource path="res://Scripts/Opening Scripts/openSettings.gd" type="Script" id=18]
-[ext_resource path="res://Scripts/LoadMenu.gd" type="Script" id=19]
+[ext_resource path="res://textures/clickergame.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/Homescreen Scripts/LoadOptionsSettingsBrowser.gd" type="Script" id=20]
 [ext_resource path="res://Scenes/Homescreen Scripts/LoadSettingsOptions.gd" type="Script" id=21]
 [ext_resource path="res://Scripts/Opening Scripts/MyPCOpen.gd" type="Script" id=22]
@@ -26,7 +26,7 @@
 [ext_resource path="res://Scripts/Opening Scripts/openMenu.gd" type="Script" id=24]
 [ext_resource path="res://Scenes/Homescreen Scripts/AcceptNote.gd" type="Script" id=25]
 [ext_resource path="res://Scripts/OptionButtonLoading Scripts/LoadModes.gd" type="Script" id=26]
-[ext_resource path="res://Scripts/Opening Scripts/openAllapps.gd" type="Script" id=27]
+[ext_resource path="res://OpenStore.gd" type="Script" id=27]
 [ext_resource path="res://Scripts/setMode.gd" type="Script" id=28]
 [ext_resource path="res://Scenes/Homescreen Scripts/PrivacySettings.gd" type="Script" id=29]
 [ext_resource path="res://Scenes/Homescreen Scripts/Rename.gd" type="Script" id=30]
@@ -46,7 +46,7 @@
 [ext_resource path="res://textures/size_large/dock2.png" type="Texture" id=44]
 [ext_resource path="res://textures/Dock & Menu/mypc.png" type="Texture" id=45]
 [ext_resource path="res://Fonts/Arial Black.ttf" type="DynamicFontData" id=46]
-[ext_resource path="res://Wallpapers/external-content_upscaled.jpg" type="Texture" id=47]
+[ext_resource path="res://textures/Screenshot 2022-07-18 185923.png" type="Texture" id=47]
 [ext_resource path="res://textures/size_large/usericon_small.png" type="Texture" id=48]
 [ext_resource path="res://textures/Screenshot 2022-04-15 221151.png" type="Texture" id=49]
 [ext_resource path="res://textures/Screenshot 2022-04-16 172907.png" type="Texture" id=50]
@@ -126,6 +126,9 @@
 [ext_resource path="res://Scripts/Opening Scripts/open_debug.gd" type="Script" id=124]
 [ext_resource path="res://Scripts/Apps/Settings.gd" type="Script" id=125]
 [ext_resource path="res://textures/Screenshot 2022-06-22 124623.png" type="Texture" id=126]
+[ext_resource path="res://DownloadApp.gd" type="Script" id=127]
+[ext_resource path="res://ClickerTest.gd" type="Script" id=128]
+[ext_resource path="res://openClicker.gd" type="Script" id=129]
 
 [sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 41 )
@@ -193,6 +196,27 @@ font_data = ExtResource( 46 )
 
 [sub_resource type="Theme" id=17]
 Label/fonts/font = SubResource( 16 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 24
+font_data = ExtResource( 46 )
+
+[sub_resource type="Theme" id=25]
+Label/fonts/font = SubResource( 24 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 28
+font_data = ExtResource( 46 )
+
+[sub_resource type="Theme" id=23]
+Label/fonts/font = SubResource( 22 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 32
+font_data = ExtResource( 46 )
+
+[sub_resource type="Theme" id=27]
+Label/fonts/font = SubResource( 26 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -303,7 +327,7 @@ size_flags_horizontal = 3
 custom_styles/hover = SubResource( 1 )
 icon = ExtResource( 90 )
 flat = true
-script = ExtResource( 111 )
+script = ExtResource( 27 )
 
 [node name="Button8" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
 margin_left = 146.0
@@ -359,8 +383,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Rkv9Cos8" type="Sprite" parent="HBoxContainer2"]
-position = Vector2( 65.5, 64.7255 )
-scale = Vector2( 0.801324, 0.780407 )
+position = Vector2( 46.4999, 86.8024 )
+scale = Vector2( 1.8063, 1.53928 )
 texture = ExtResource( 47 )
 
 [node name="Sprite" type="Sprite" parent="HBoxContainer2"]
@@ -462,145 +486,28 @@ flat = true
 pause_mode = 2
 margin_left = 3.0
 margin_top = 45.0
-margin_right = 360.0
-margin_bottom = 321.0
+margin_right = 390.0
+margin_bottom = 364.0
 theme = SubResource( 4 )
-
-[node name="All Apps" type="Button" parent="Menu"]
-pause_mode = 2
-margin_left = 246.0
-margin_top = 15.0
-margin_right = 340.0
-margin_bottom = 35.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-text = "All Apps"
-script = ExtResource( 27 )
-
-[node name="AllAppMenu" type="HScrollBar" parent="Menu"]
-pause_mode = 2
-margin_left = 362.0
-margin_top = 2.0
-margin_right = 561.0
-margin_bottom = 304.0
-size_flags_horizontal = 0
-script = ExtResource( 19 )
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Menu/AllAppMenu"]
-margin_left = 14.0
-margin_top = 5.0
-margin_right = 194.0
-margin_bottom = 297.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/AllAppMenu/ScrollContainer"]
-margin_right = 148.0
-margin_bottom = 634.0
-
-[node name="Button" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_right = 148.0
-margin_bottom = 54.0
-text = "MyPC"
-icon = ExtResource( 78 )
-script = ExtResource( 3 )
-
-[node name="Button2" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 148.0
-margin_bottom = 112.0
-text = "Browser"
-icon = ExtResource( 84 )
-script = ExtResource( 14 )
-
-[node name="Button3" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_top = 116.0
-margin_right = 148.0
-margin_bottom = 170.0
-text = "Music"
-icon = ExtResource( 71 )
-script = ExtResource( 111 )
-
-[node name="Button4" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_top = 174.0
-margin_right = 148.0
-margin_bottom = 228.0
-text = "PixelOffice"
-icon = ExtResource( 76 )
-script = ExtResource( 111 )
-
-[node name="Button5" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_top = 232.0
-margin_right = 148.0
-margin_bottom = 286.0
-text = "Presenter"
-icon = ExtResource( 89 )
-script = ExtResource( 111 )
-
-[node name="Button6" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_top = 290.0
-margin_right = 148.0
-margin_bottom = 344.0
-text = "Spreadsheets"
-icon = ExtResource( 74 )
-script = ExtResource( 111 )
-
-[node name="Button7" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_top = 348.0
-margin_right = 148.0
-margin_bottom = 402.0
-text = "Writer"
-icon = ExtResource( 72 )
-script = ExtResource( 53 )
-
-[node name="Button8" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_top = 406.0
-margin_right = 148.0
-margin_bottom = 460.0
-text = "Pixel Store"
-icon = ExtResource( 88 )
-script = ExtResource( 111 )
-
-[node name="Button9" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_top = 464.0
-margin_right = 148.0
-margin_bottom = 518.0
-text = "Settings"
-icon = ExtResource( 87 )
-script = ExtResource( 18 )
-
-[node name="Button10" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_top = 522.0
-margin_right = 148.0
-margin_bottom = 576.0
-text = "Terminal"
-icon = ExtResource( 85 )
-script = ExtResource( 111 )
-
-[node name="Button11" type="Button" parent="Menu/AllAppMenu/ScrollContainer/VBoxContainer"]
-margin_top = 580.0
-margin_right = 148.0
-margin_bottom = 634.0
-text = "Task Manager"
-icon = ExtResource( 51 )
-script = ExtResource( 62 )
 
 [node name="Button" type="Button" parent="Menu"]
 anchor_left = 0.036
 anchor_top = 0.793
 anchor_right = 0.036
 anchor_bottom = 0.793
-margin_left = 0.148001
-margin_top = 8.132
-margin_right = 111.148
-margin_bottom = 44.132
+margin_left = -3.852
+margin_top = 14.132
+margin_right = 107.148
+margin_bottom = 50.132
 text = "User"
 icon = ExtResource( 48 )
 
 [node name="All Apps2" type="Button" parent="Menu"]
 pause_mode = 2
-margin_left = 246.0
-margin_top = 40.0
-margin_right = 340.0
-margin_bottom = 60.0
+margin_left = 117.0
+margin_top = 14.0
+margin_right = 211.0
+margin_bottom = 34.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Power"
@@ -637,10 +544,10 @@ script = ExtResource( 54 )
 
 [node name="All Apps3" type="Button" parent="Menu"]
 pause_mode = 2
-margin_left = 246.0
-margin_top = 65.0
-margin_right = 340.0
-margin_bottom = 85.0
+margin_left = 117.0
+margin_top = 39.0
+margin_right = 211.0
+margin_bottom = 59.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Calculator"
@@ -648,14 +555,120 @@ script = ExtResource( 120 )
 
 [node name="All Apps4" type="Button" parent="Menu"]
 pause_mode = 2
-margin_left = 246.0
-margin_top = 90.0
-margin_right = 340.0
-margin_bottom = 110.0
+margin_left = 117.0
+margin_top = 64.0
+margin_right = 211.0
+margin_bottom = 84.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Debug"
 script = ExtResource( 124 )
+
+[node name="AllAppMenu" type="ScrollContainer" parent="Menu"]
+margin_left = 218.0
+margin_top = 12.0
+margin_right = 381.0
+margin_bottom = 306.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/AllAppMenu"]
+margin_right = 148.0
+margin_bottom = 634.0
+
+[node name="Button" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_right = 148.0
+margin_bottom = 54.0
+text = "MyPC"
+icon = ExtResource( 78 )
+script = ExtResource( 3 )
+
+[node name="Button2" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_top = 58.0
+margin_right = 148.0
+margin_bottom = 112.0
+text = "Browser"
+icon = ExtResource( 84 )
+script = ExtResource( 14 )
+
+[node name="Button3" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_top = 116.0
+margin_right = 148.0
+margin_bottom = 170.0
+text = "Music"
+icon = ExtResource( 71 )
+script = ExtResource( 111 )
+
+[node name="Button4" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_top = 174.0
+margin_right = 148.0
+margin_bottom = 228.0
+text = "PixelOffice"
+icon = ExtResource( 76 )
+script = ExtResource( 111 )
+
+[node name="Button5" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_top = 232.0
+margin_right = 148.0
+margin_bottom = 286.0
+text = "Presenter"
+icon = ExtResource( 89 )
+script = ExtResource( 111 )
+
+[node name="Button6" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_top = 290.0
+margin_right = 148.0
+margin_bottom = 344.0
+text = "Spreadsheets"
+icon = ExtResource( 74 )
+script = ExtResource( 111 )
+
+[node name="Button7" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_top = 348.0
+margin_right = 148.0
+margin_bottom = 402.0
+text = "Writer"
+icon = ExtResource( 72 )
+script = ExtResource( 53 )
+
+[node name="Button8" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_top = 406.0
+margin_right = 148.0
+margin_bottom = 460.0
+text = "Pixel Store"
+icon = ExtResource( 88 )
+script = ExtResource( 27 )
+
+[node name="Button9" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_top = 464.0
+margin_right = 148.0
+margin_bottom = 518.0
+text = "Settings"
+icon = ExtResource( 87 )
+script = ExtResource( 18 )
+
+[node name="Button10" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_top = 522.0
+margin_right = 148.0
+margin_bottom = 576.0
+text = "Terminal"
+icon = ExtResource( 85 )
+script = ExtResource( 111 )
+
+[node name="Button11" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+margin_top = 580.0
+margin_right = 148.0
+margin_bottom = 634.0
+text = "Task Manager"
+icon = ExtResource( 51 )
+script = ExtResource( 62 )
+
+[node name="Button12" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
+visible = false
+margin_top = 638.0
+margin_right = 148.0
+margin_bottom = 658.0
+text = "Clicker Test"
+icon = ExtResource( 19 )
+script = ExtResource( 129 )
 
 [node name="HelpMenu" type="PopupMenu" parent="."]
 pause_mode = 2
@@ -806,6 +819,14 @@ text = "Pictures"
 position = Vector2( 467, 62 )
 scale = Vector2( 2.29487, 2.31481 )
 texture = ExtResource( 108 )
+
+[node name="Button" type="Button" parent="myPC/Sprite2"]
+margin_left = -21.0
+margin_top = -15.0
+margin_right = 21.0
+margin_bottom = 15.0
+flat = true
+script = ExtResource( 53 )
 
 [node name="Label2" type="Label" parent="myPC"]
 margin_left = 430.0
@@ -1064,7 +1085,7 @@ margin_left = -277.5
 margin_top = -177.0
 margin_right = 277.5
 margin_bottom = 177.0
-window_title = "Writer"
+window_title = "Writer Home"
 
 [node name="Button" type="Button" parent="WriterHome"]
 anchor_left = 0.016
@@ -1857,7 +1878,7 @@ text = "Control Panel"
 [node name="Label3" type="Label" parent="MainSettings"]
 margin_left = 17.0
 margin_top = 158.0
-margin_right = 94.0
+margin_right = 213.0
 margin_bottom = 172.0
 text = "Display Size (for dock position)"
 
@@ -1905,7 +1926,7 @@ margin_left = 24.0
 margin_top = 90.0
 margin_right = 112.0
 margin_bottom = 104.0
-text = "Version: BETA 0.0"
+text = "Version: BETA 0.2"
 
 [node name="Label3" type="Label" parent="About"]
 margin_left = 24.0
@@ -1926,7 +1947,7 @@ margin_left = 24.0
 margin_top = 142.0
 margin_right = 191.0
 margin_bottom = 156.0
-text = "Installed Storage: 512GB"
+text = "Installed Storage: 128GB"
 
 [node name="Label6" type="Label" parent="About"]
 margin_left = 24.0
@@ -1953,18 +1974,20 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -155.5
-margin_top = -45.5
-margin_right = 155.5
-margin_bottom = 45.5
+margin_top = -45.0
+margin_right = 156.5
+margin_bottom = 64.0
 window_title = "Uh Oh Buddy"
 
 [node name="Label2" type="Label" parent="uh oh buddy"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 303.0
-margin_bottom = 55.0
-text = "Using the search bar with Cynco CynSearch
-is not allowed."
+margin_right = 304.0
+margin_bottom = 73.0
+text = "Uh-Oh, Buddy. It looks like you searched for 
+something not approved by the Government.
+Your search has been reported to the NIA and
+will be subject to review."
 
 [node name="ImageView2" type="WindowDialog" parent="."]
 pause_mode = 2
@@ -2161,10 +2184,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -134.5
-margin_top = -188.0
-margin_right = 134.5
-margin_bottom = 188.0
+margin_left = -177.5
+margin_top = -161.0
+margin_right = 178.5
+margin_bottom = 218.0
 window_title = "Calculator"
 script = ExtResource( 119 )
 
@@ -2265,10 +2288,10 @@ theme = SubResource( 15 )
 text = "C"
 
 [node name="Add" type="Button" parent="Calculator"]
-margin_left = 179.0
+margin_left = 265.0
 margin_top = 102.0
-margin_right = 261.0
-margin_bottom = 152.0
+margin_right = 347.0
+margin_bottom = 206.0
 size_flags_horizontal = 3
 theme = SubResource( 15 )
 text = "+"
@@ -2276,7 +2299,7 @@ text = "+"
 [node name="Display" type="Label" parent="Calculator"]
 margin_left = 8.0
 margin_top = 22.0
-margin_right = 261.0
+margin_right = 347.0
 margin_bottom = 94.0
 theme = SubResource( 17 )
 text = "0"
@@ -2292,21 +2315,48 @@ theme = SubResource( 15 )
 text = "="
 
 [node name="0" type="Button" parent="Calculator"]
-margin_left = 8.0
-margin_top = 318.0
-margin_right = 261.0
-margin_bottom = 368.0
+margin_left = 265.0
+margin_top = 264.0
+margin_right = 346.0
+margin_bottom = 314.0
 size_flags_horizontal = 3
 theme = SubResource( 15 )
 text = "0"
 
 [node name="Label" type="Label" parent="Calculator"]
-margin_left = 111.0
+margin_left = 194.0
 margin_top = 6.0
-margin_right = 263.0
+margin_right = 346.0
 margin_bottom = 20.0
 text = "Recent Equasion - None"
 align = 2
+
+[node name="Subtract" type="Button" parent="Calculator"]
+margin_left = 265.0
+margin_top = 210.0
+margin_right = 346.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+theme = SubResource( 15 )
+text = "-"
+
+[node name="Multiply" type="Button" parent="Calculator"]
+margin_left = 179.0
+margin_top = 102.0
+margin_right = 261.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+theme = SubResource( 15 )
+text = "x"
+
+[node name="Divide" type="Button" parent="Calculator"]
+margin_left = 8.0
+margin_top = 319.0
+margin_right = 346.0
+margin_bottom = 369.0
+size_flags_horizontal = 3
+theme = SubResource( 15 )
+text = "÷"
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
 script = ExtResource( 121 )
@@ -2373,7 +2423,7 @@ margin_left = 8.0
 margin_top = -33.0
 margin_right = 148.0
 margin_bottom = -19.0
-text = "PixelOS GD BETA 0.0"
+text = "PixelOS GD Alpha 0.2"
 
 [node name="Label2" type="Label" parent="."]
 anchor_top = 1.0
@@ -2383,6 +2433,152 @@ margin_top = -17.0
 margin_right = 148.0
 margin_bottom = -3.0
 text = "© Pixel"
+
+[node name="Store" type="WindowDialog" parent="."]
+margin_left = 298.0
+margin_top = 109.0
+margin_right = 876.0
+margin_bottom = 526.0
+window_title = "Pixel Store"
+script = ExtResource( 127 )
+
+[node name="AppPage" type="Control" parent="Store"]
+visible = false
+margin_right = 577.0
+margin_bottom = 418.0
+
+[node name="Download" type="Button" parent="Store/AppPage"]
+margin_left = 54.0
+margin_top = 125.0
+margin_right = 162.0
+margin_bottom = 160.0
+text = "Download"
+
+[node name="Label" type="Label" parent="Store/AppPage"]
+margin_left = 24.0
+margin_top = 58.0
+margin_right = 201.0
+margin_bottom = 93.0
+theme = SubResource( 25 )
+text = "Clicker Game"
+
+[node name="ProgressBar" type="ProgressBar" parent="Store/AppPage"]
+visible = false
+margin_left = 12.0
+margin_top = 11.0
+margin_right = 566.0
+margin_bottom = 25.0
+
+[node name="StorePage" type="Control" parent="Store"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -288.0
+margin_top = -207.5
+margin_right = 288.0
+margin_bottom = 207.5
+
+[node name="Label" type="Label" parent="Store/StorePage"]
+margin_left = 6.0
+margin_top = 17.0
+margin_right = 74.0
+margin_bottom = 57.0
+theme = SubResource( 23 )
+text = "New"
+
+[node name="ClickerTesticon" type="Button" parent="Store/StorePage"]
+margin_left = 13.0
+margin_top = 64.0
+margin_right = 95.0
+margin_bottom = 140.0
+icon = ExtResource( 19 )
+
+[node name="Label" type="Label" parent="Store/StorePage/ClickerTesticon"]
+margin_left = 3.0
+margin_top = 83.0
+margin_right = 77.0
+margin_bottom = 97.0
+text = "Clicker Test"
+
+[node name="WaitforDownload" type="Timer" parent="Store"]
+wait_time = 1.5
+
+[node name="DownloadSpeed" type="Timer" parent="Store"]
+
+[node name="UninstallSpeed" type="Timer" parent="Store"]
+
+[node name="StorePopup" type="AcceptDialog" parent="Store"]
+margin_left = 291.0
+margin_top = 263.0
+margin_right = 519.0
+margin_bottom = 321.0
+window_title = "Store"
+
+[node name="Label2" type="Label" parent="Store/StorePopup"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 220.0
+margin_bottom = 22.0
+text = "Clicker Test Succesfully installed."
+
+[node name="ClickerTest" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -141.0
+margin_top = -241.5
+margin_right = 141.0
+margin_bottom = 241.5
+window_title = "Clicker Test"
+script = ExtResource( 128 )
+
+[node name="Button" type="Button" parent="ClickerTest"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -85.5
+margin_top = -27.0
+margin_right = 85.5
+margin_bottom = 27.0
+text = "Click Me"
+
+[node name="Label" type="Label" parent="ClickerTest"]
+margin_left = 7.0
+margin_top = 86.0
+margin_right = 276.0
+margin_bottom = 132.0
+theme = SubResource( 27 )
+text = "$0"
+align = 1
+
+[node name="Button2" type="Button" parent="ClickerTest"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -82.0
+margin_top = -165.0
+margin_right = 82.0
+margin_bottom = -145.0
+disabled = true
+text = "Upgrade Click - $200"
+
+[node name="Button3" type="Button" parent="ClickerTest"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -82.0
+margin_top = -137.0
+margin_right = 82.0
+margin_bottom = -117.0
+disabled = true
+text = "Auto Clicker - $50"
+
+[node name="AutoClicker" type="Timer" parent="ClickerTest"]
 
 [connection signal="timeout" from="HBoxContainer/Area2D/Sprite2/Timer" to="HBoxContainer/Area2D/Sprite2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="HBoxContainer3/Button/Timer" to="HBoxContainer3/Button" method="_on_Timer_timeout"]
@@ -2457,5 +2653,17 @@ text = "© Pixel"
 [connection signal="pressed" from="Calculator/Add" to="Calculator" method="_on_Add_pressed"]
 [connection signal="pressed" from="Calculator/=" to="Calculator" method="_on__pressed"]
 [connection signal="pressed" from="Calculator/0" to="Calculator" method="_on_0_pressed"]
+[connection signal="pressed" from="Calculator/Subtract" to="Calculator" method="_on_Subtract_pressed"]
+[connection signal="pressed" from="Calculator/Multiply" to="Calculator" method="_on_Multiply_pressed"]
+[connection signal="pressed" from="Calculator/Divide" to="Calculator" method="_on_Divide_pressed"]
 [connection signal="pressed" from="Debug/Button" to="WebWarning" method="_on_Button_pressed"]
 [connection signal="pressed" from="Debug/Button" to="Debug" method="_on_Button_pressed"]
+[connection signal="pressed" from="Store/AppPage/Download" to="Store" method="_on_Download_pressed"]
+[connection signal="pressed" from="Store/StorePage/ClickerTesticon" to="Store" method="_on_ClickerTesticon_pressed"]
+[connection signal="timeout" from="Store/WaitforDownload" to="Store" method="_on_WaitforDownload_timeout"]
+[connection signal="timeout" from="Store/DownloadSpeed" to="Store" method="_on_DownloadSpeed_timeout"]
+[connection signal="timeout" from="Store/UninstallSpeed" to="Store" method="_on_UninstallSpeed_timeout"]
+[connection signal="pressed" from="ClickerTest/Button" to="ClickerTest" method="_on_Button_pressed"]
+[connection signal="pressed" from="ClickerTest/Button2" to="ClickerTest" method="_on_upgrade_click_pressed"]
+[connection signal="pressed" from="ClickerTest/Button3" to="ClickerTest" method="_on_AutoClick_pressed"]
+[connection signal="timeout" from="ClickerTest/AutoClicker" to="ClickerTest" method="_on_AutoClicker_timeout"]

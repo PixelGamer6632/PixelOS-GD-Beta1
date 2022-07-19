@@ -1,9 +1,5 @@
 extends WindowDialog
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var selected_tab = "Tab1"
 var search_engine = "Eveulu Search"
 var site_selected = []
@@ -32,21 +28,21 @@ func _ready():
 	elif search_engine == "Cynco CynSearch":
 		cynco_home.visible = true
 
-onready var search_box = get_node("/root/Control/Browser/LineEdit")
+onready var search_box = $LineEdit
 onready var search_box2 = get_node("/root/Control/Browser/Eveulu Search/LineEdit2")
 onready var search_button = get_node("/root/Control/Browser/Eveulu Search/Button3")
 onready var option_engine = get_node("/root/Control/BrowserSettings/OptionButton")
 onready var track_comfirm = get_node("/root/Control/BrowserSettings/CheckButton")
 onready var pixelsearch_logo = get_node("/root/Control/Browser/Eveulu Search/Sprite2")
-onready var Tab2 = get_node("/root/Control/Browser/HBoxContainer/Tab2")
-onready var Tab3 = get_node("/root/Control/Browser/HBoxContainer/Tab3")
-onready var Tab4 = get_node("/root/Control/Browser/HBoxContainer/Tab4")
-onready var Tab5 = get_node("/root/Control/Browser/HBoxContainer/Tab5")
-onready var Tab6 = get_node("/root/Control/Browser/HBoxContainer/Tab6")
-onready var Tab7 = get_node("/root/Control/Browser/HBoxContainer/Tab7")
-onready var Tab8 = get_node("/root/Control/Browser/HBoxContainer/Tab8")
-onready var Tab9 = get_node("/root/Control/Browser/HBoxContainer/Tab9")
-onready var Tab10 = get_node("/root/Control/Browser/HBoxContainer/Tab10")
+onready var Tab2 = $HBoxContainer/Tab2
+onready var Tab3 = $HBoxContainer/Tab3
+onready var Tab4 = $HBoxContainer/Tab4
+onready var Tab5 = $HBoxContainer/Tab5
+onready var Tab6 = $HBoxContainer/Tab6
+onready var Tab7 = $HBoxContainer/Tab7
+onready var Tab8 = $HBoxContainer/Tab8
+onready var Tab9 = $HBoxContainer/Tab9
+onready var Tab10 = $HBoxContainer/Tab10
 
 onready var eveulu_main = get_node("/root/Control/Browser/Eveulu Search")
 onready var cynco_home = get_node("/root/Control/Browser/Cynco CynSearch")

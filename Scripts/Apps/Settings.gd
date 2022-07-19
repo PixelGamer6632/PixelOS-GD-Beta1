@@ -1,37 +1,28 @@
 extends WindowDialog
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 onready var dock = get_node("/root/Control/HBoxContainer")
 onready var taskbar = get_node("/root/Control/HBoxContainer3")
 onready var taskbar2 = get_node("/root/Control/VBoxContainer")
 
 onready var help = get_node("/root/Control/HBoxContainer3/Button2")
 onready var file = get_node("/root/Control/HBoxContainer3/Button3")
+onready var control = get_node("/root/Control/VBoxContainer/Button")
 
-onready var help_toggle = get_node("/root/Control/MainSettings/TaskBarIcons/Help")
-onready var file_toggle = get_node("/root/Control/MainSettings/TaskBarIcons/Help2")
-onready var control_toggle = get_node("/root/Control/MainSettings/TaskBarIcons/Help3")
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+onready var help_toggle = $TaskBarIcons/Help
+onready var file_toggle = $TaskBarIcons/Help2
+onready var control_toggle = $TaskBarIcons/Help3
 
 func _on_CheckButton_pressed():
 	if $CheckButton.pressed == true:
 		dock.visible = false
 		taskbar.visible = false
+		control.visible = true
+		control_toggle.pressed = false
+		control_toggle.disabled = true
 	else:
 		dock.visible = true
 		taskbar.visible = true
+		control_toggle.disabled = false
 
 func _on_ConfirmationDialog_confirmed():
 	dock.visible = true

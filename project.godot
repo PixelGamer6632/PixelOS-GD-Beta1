@@ -22,6 +22,7 @@ _global_script_class_icons={
 
 config/name="PixelOS 7"
 run/main_scene="res://Scenes/LockScreen.tscn"
+boot_splash/image="res://textures/Screenshot 2022-07-17 181357.png"
 config/icon="res://textures/Dock & Menu/mypc.png"
 
 [autoload]

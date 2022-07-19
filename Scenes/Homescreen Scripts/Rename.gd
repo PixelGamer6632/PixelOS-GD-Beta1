@@ -8,7 +8,7 @@ onready var writer_readme = get_node("/root/Control/WriterHome/Button")
 onready var writer_untitled = get_node("/root/Control/WriterHome/Button3")
 onready var amp_strings = get_node("/root/Control/myPC/VBoxContainer/Button")
 onready var pixelos3 = get_node("/root/Control/myPC/VBoxContainer/Button2")
-onready var readme = get_node("/root/Control/myPC/VBoxContainer/Button3")
+onready var readme = get_node("/root/Control/myPC/VBoxContainer/readmebutton")
 onready var untitled = get_node("/root/Control/myPC/VBoxContainer/Button4")
 onready var pixelos1 = get_node("/root/Control/myPC/VBoxContainer/Button5")
 onready var pixlos1_label = get_node("/root/Control/myPC/Label3")
@@ -29,11 +29,11 @@ func _pressed():
 		reset()
 	elif options.text == "README.wdoc":
 		readme.text = text_input.text + ".wdoc"
-		writer_readme.text = text_input.text
+		writer_readme.text = text_input.text + ".wdoc"
 		reset()
 	elif options.text == "untitled.wdoc":
 		untitled.text = text_input.text + ".wdoc"
-		writer_untitled.text = text_input.text
+		writer_untitled.text = text_input.text + ".wdoc"
 		reset()
 	elif options.text == "pixelos1.png":
 		pixelos1.text = text_input.text + ".png"

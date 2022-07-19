@@ -1,4 +1,4 @@
-extends HScrollBar
+extends PopupPanel
 
 
 # Declare member variables here. Examples:

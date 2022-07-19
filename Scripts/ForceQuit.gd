@@ -6,6 +6,7 @@ extends Button
 # var b = "text"
 onready var quit_options = get_node("/root/Control/TaskManager/OptionButton")
 onready var dock2 = get_node("/root/Control/TaskManager/Button/VBoxContainer/Dock")
+onready var dock_usage = get_node("/root/Control/TaskManager/VBoxContainer/DockUsage")
 onready var dock = get_node("/root/Control/HBoxContainer")
 onready var main = get_node("/root/Control/TaskManager")
 onready var writer = get_node("/root/Control/WriterHome")
@@ -18,6 +19,7 @@ func _pressed():
 	if quit_options.text == "PixelDock":
 		dock.visible = false
 		dock2.visible = false
+		dock_usage.visible = false
 	if quit_options.text == "Task Manager":
 		main.visible = false
 	if quit_options.text == "Writer 64 Bit":
