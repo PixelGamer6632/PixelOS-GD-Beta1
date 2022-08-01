@@ -1,9 +1,9 @@
-[gd_scene load_steps=157 format=2]
+[gd_scene load_steps=181 format=2]
 
 [ext_resource path="res://addons/SliderLabel/SliderLabel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Homescreen Scripts/ApplyPosition.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Opening Scripts/Button.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/eeeee.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Homescreen.tres.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Homescreen Scripts/CloseBrowserSettings.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Homescreen Scripts/ApplyWallpapers.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/Closing Scripts/closeSettings.gd" type="Script" id=7]
@@ -24,7 +24,7 @@
 [ext_resource path="res://Scripts/Opening Scripts/MyPCOpen.gd" type="Script" id=22]
 [ext_resource path="res://Scripts/LoadFullScreen.gd" type="Script" id=23]
 [ext_resource path="res://Scripts/Opening Scripts/openMenu.gd" type="Script" id=24]
-[ext_resource path="res://Scenes/Homescreen Scripts/AcceptNote.gd" type="Script" id=25]
+[ext_resource path="res://UI.tres" type="Theme" id=25]
 [ext_resource path="res://Scripts/OptionButtonLoading Scripts/LoadModes.gd" type="Script" id=26]
 [ext_resource path="res://OpenStore.gd" type="Script" id=27]
 [ext_resource path="res://Scripts/setMode.gd" type="Script" id=28]
@@ -40,10 +40,10 @@
 [ext_resource path="res://Scripts/Opening Scripts/openRename.gd" type="Script" id=38]
 [ext_resource path="res://Scenes/Homescreen Scripts/Pause.gd" type="Script" id=39]
 [ext_resource path="res://Scenes/Homescreen Scripts/Search.gd" type="Script" id=40]
-[ext_resource path="res://textures/size_large/selected versions/mypc_selected.png" type="Texture" id=41]
+[ext_resource path="res://Dock.gd" type="Script" id=41]
 [ext_resource path="res://textures/size_large/x button.png" type="Texture" id=42]
 [ext_resource path="res://textures/size_large/8fwmtjpc.bmp" type="Texture" id=43]
-[ext_resource path="res://textures/size_large/dock2.png" type="Texture" id=44]
+[ext_resource path="res://Scenes/Main.tscn" type="PackedScene" id=44]
 [ext_resource path="res://textures/Dock & Menu/mypc.png" type="Texture" id=45]
 [ext_resource path="res://Fonts/Arial Black.ttf" type="DynamicFontData" id=46]
 [ext_resource path="res://textures/Screenshot 2022-07-18 185923.png" type="Texture" id=47]
@@ -72,28 +72,18 @@
 [ext_resource path="res://textures/Taskbar/file_bar.png" type="Texture" id=70]
 [ext_resource path="res://textures/size_small/music_app.png" type="Texture" id=71]
 [ext_resource path="res://textures/size_small/pixel_writer.png" type="Texture" id=72]
-[ext_resource path="res://textures/Dock & Menu/terminal.png" type="Texture" id=73]
 [ext_resource path="res://textures/size_small/pixel_spreadsheets.png" type="Texture" id=74]
 [ext_resource path="res://textures/Taskbar/taskbar.png" type="Texture" id=75]
 [ext_resource path="res://textures/size_small/pixel_office.png" type="Texture" id=76]
 [ext_resource path="res://textures/Taskbar/help_bar.png" type="Texture" id=77]
 [ext_resource path="res://textures/size_small/my_pc-01.png" type="Texture" id=78]
 [ext_resource path="res://Music/ambient-piano-amp-strings-10711.mp3" type="AudioStream" id=79]
-[ext_resource path="res://textures/Dock & Menu/pixel_spreadsheets.png" type="Texture" id=80]
-[ext_resource path="res://textures/Dock & Menu/pixel_writer.png" type="Texture" id=81]
-[ext_resource path="res://textures/Dock & Menu/music.png" type="Texture" id=82]
-[ext_resource path="res://textures/Dock & Menu/pixel_office.png" type="Texture" id=83]
 [ext_resource path="res://textures/size_small/pixel_browser.png" type="Texture" id=84]
 [ext_resource path="res://textures/size_small/terminal.png" type="Texture" id=85]
 [ext_resource path="res://textures/size_large/selected versions/x_selected.png" type="Texture" id=86]
 [ext_resource path="res://textures/size_small/settings.png" type="Texture" id=87]
 [ext_resource path="res://textures/size_small/pixel_store.png" type="Texture" id=88]
 [ext_resource path="res://textures/size_small/pixel_presenter.png" type="Texture" id=89]
-[ext_resource path="res://textures/Dock & Menu/pixel_store.png" type="Texture" id=90]
-[ext_resource path="res://textures/size_large/selected versions/menu_selected.png" type="Texture" id=91]
-[ext_resource path="res://textures/Dock & Menu/pixel_presenter.png" type="Texture" id=92]
-[ext_resource path="res://textures/Dock & Menu/pixel_browser.png" type="Texture" id=93]
-[ext_resource path="res://textures/Dock & Menu/settings.png" type="Texture" id=94]
 [ext_resource path="res://Wallpapers/506796.jpg" type="Texture" id=95]
 [ext_resource path="res://Wallpapers/Screenshot 2022-05-10 233343.png" type="Texture" id=96]
 [ext_resource path="res://Wallpapers/Screenshot 2022-01-23 200128.png" type="Texture" id=97]
@@ -120,7 +110,6 @@
 [ext_resource path="res://textures/icon.png" type="Texture" id=118]
 [ext_resource path="res://Scripts/Apps/Calculator.gd" type="Script" id=119]
 [ext_resource path="res://Scripts/Opening Scripts/openCalc.gd" type="Script" id=120]
-[ext_resource path="res://Scripts/SaveGame.gd" type="Script" id=121]
 [ext_resource path="res://Scripts/displayFPS.gd" type="Script" id=122]
 [ext_resource path="res://Scripts/confirmWeb.gd" type="Script" id=123]
 [ext_resource path="res://Scripts/Opening Scripts/open_debug.gd" type="Script" id=124]
@@ -129,17 +118,12 @@
 [ext_resource path="res://DownloadApp.gd" type="Script" id=127]
 [ext_resource path="res://ClickerTest.gd" type="Script" id=128]
 [ext_resource path="res://openClicker.gd" type="Script" id=129]
-
-[sub_resource type="StyleBoxTexture" id=5]
-texture = ExtResource( 41 )
-region_rect = Rect2( 0, 0, 60, 60 )
-
-[sub_resource type="Theme" id=6]
-Button/styles/hover = SubResource( 5 )
-
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 41 )
-region_rect = Rect2( 0, 0, 60, 60 )
+[ext_resource path="res://ManageSpace.gd" type="Script" id=130]
+[ext_resource path="res://AcceptNote.gd" type="Script" id=131]
+[ext_resource path="res://Scripts/Closing Scripts/Close3.gd" type="Script" id=132]
+[ext_resource path="res://Scripts/Closing Scripts/CloseTabs2.gd" type="Script" id=133]
+[ext_resource path="res://Scripts/Closing Scripts/Close2.gd" type="Script" id=134]
+[ext_resource path="res://CloseError.gd" type="Script" id=135]
 
 [sub_resource type="CanvasItemMaterial" id=2]
 
@@ -147,9 +131,124 @@ region_rect = Rect2( 0, 0, 60, 60 )
 texture = ExtResource( 86 )
 region_rect = Rect2( 0, 0, 30, 30 )
 
-[sub_resource type="Theme" id=4]
+[sub_resource type="DynamicFont" id=64]
+size = 17
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 46 )
 
-[sub_resource type="Theme" id=7]
+[sub_resource type="Theme" id=65]
+Button/fonts/font = SubResource( 64 )
+
+[sub_resource type="StyleBoxFlat" id=66]
+bg_color = Color( 0.215686, 0.368627, 0.545098, 1 )
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id=68]
+bg_color = Color( 0.14902, 0.258824, 0.384314, 1 )
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id=67]
+bg_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id=41]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=42]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=43]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="Theme" id=44]
+VBoxContainer/constants/separation = 4
+
+[sub_resource type="StyleBoxFlat" id=45]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=60]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=39]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=61]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
 
 [sub_resource type="DynamicFont" id=18]
 size = 29
@@ -159,6 +258,60 @@ font_data = ExtResource( 46 )
 Label/colors/font_color = Color( 0, 0, 0, 1 )
 Label/fonts/font = SubResource( 18 )
 
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=46]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=47]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=48]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+corner_detail = 10
+expand_margin_top = 21.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=49]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
 [sub_resource type="DynamicFont" id=8]
 size = 32
 font_data = ExtResource( 46 )
@@ -166,7 +319,40 @@ font_data = ExtResource( 46 )
 [sub_resource type="Theme" id=9]
 Label/fonts/font = SubResource( 8 )
 
-[sub_resource type="Theme" id=20]
+[sub_resource type="StyleBoxFlat" id=50]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=62]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+
+[sub_resource type="StyleBoxFlat" id=59]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=51]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
 
 [sub_resource type="DynamicFont" id=10]
 font_data = ExtResource( 46 )
@@ -174,10 +360,35 @@ font_data = ExtResource( 46 )
 [sub_resource type="Theme" id=11]
 Label/fonts/font = SubResource( 10 )
 
-[sub_resource type="Theme" id=21]
+[sub_resource type="StyleBoxFlat" id=52]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=55]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 12.5, 40 )
+
+[sub_resource type="StyleBoxFlat" id=56]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
 
 [sub_resource type="DynamicFont" id=13]
 size = 30
@@ -190,12 +401,38 @@ font_data = ExtResource( 46 )
 Button/fonts/font = SubResource( 13 )
 Label/fonts/font = SubResource( 14 )
 
+[sub_resource type="DynamicFont" id=57]
+size = 45
+font_data = ExtResource( 46 )
+
+[sub_resource type="Theme" id=58]
+default_font = SubResource( 57 )
+Button/fonts/font = null
+
 [sub_resource type="DynamicFont" id=16]
 size = 47
 font_data = ExtResource( 46 )
 
 [sub_resource type="Theme" id=17]
 Label/fonts/font = SubResource( 16 )
+
+[sub_resource type="StyleBoxFlat" id=53]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=37]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
 
 [sub_resource type="DynamicFont" id=24]
 size = 24
@@ -211,6 +448,24 @@ font_data = ExtResource( 46 )
 [sub_resource type="Theme" id=23]
 Label/fonts/font = SubResource( 22 )
 
+[sub_resource type="StyleBoxFlat" id=40]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=54]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
 [sub_resource type="DynamicFont" id=26]
 size = 32
 font_data = ExtResource( 46 )
@@ -218,14 +473,40 @@ font_data = ExtResource( 46 )
 [sub_resource type="Theme" id=27]
 Label/fonts/font = SubResource( 26 )
 
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0.219608, 0.219608, 0.219608, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_top = 20.0
+shadow_size = 2
+
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -3.0
-margin_top = -3.0
-margin_right = -4.0
-margin_bottom = -3.0
+margin_left = 1.0
+margin_top = -1.0
+margin_bottom = -1.0
 script = ExtResource( 23 )
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 358.5
+margin_top = 49.0
+margin_right = 468.5
+margin_bottom = 226.0
+
+[node name="PopupPanel" type="PopupPanel" parent="HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 177.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.94
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 pause_mode = 2
@@ -243,129 +524,31 @@ size_flags_vertical = 3
 [node name="Area2D" type="Area2D" parent="HBoxContainer"]
 script = ExtResource( 117 )
 
-[node name="Sprite2" type="Sprite" parent="HBoxContainer/Area2D"]
+[node name="Sprite2" type="Container" parent="HBoxContainer/Area2D"]
 pause_mode = 2
 show_behind_parent = true
-position = Vector2( 37.5, 153.535 )
-scale = Vector2( 1, 1.0035 )
-texture = ExtResource( 44 )
-script = ExtResource( 4 )
-
-[node name="Button" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
-margin_left = -353.0
-margin_top = -51.0
-margin_right = -281.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-theme = SubResource( 6 )
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 45 )
-flat = true
-script = ExtResource( 3 )
-
-[node name="Button2" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
-margin_left = -281.0
-margin_top = -50.9998
-margin_right = -209.0
-margin_bottom = 54.0002
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 93 )
-flat = true
-script = ExtResource( 14 )
-
-[node name="Button3" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
-margin_left = -211.0
-margin_top = -52.0
-margin_right = -139.0
-margin_bottom = 53.0
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 83 )
-flat = true
-script = ExtResource( 111 )
-
-[node name="Button4" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
-margin_left = -140.0
-margin_top = -52.0
-margin_right = -68.0
-margin_bottom = 53.0
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 81 )
-flat = true
-script = ExtResource( 53 )
-
-[node name="Button5" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
-margin_left = -68.0
-margin_top = -52.0
-margin_right = 4.0
-margin_bottom = 53.0
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 92 )
-flat = true
-script = ExtResource( 111 )
-
-[node name="Button6" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
-margin_left = 3.0
-margin_top = -52.0
-margin_right = 75.0
-margin_bottom = 53.0
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 80 )
-flat = true
-script = ExtResource( 111 )
-
-[node name="Button7" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
-margin_left = 74.0
-margin_top = -52.0
-margin_right = 146.0
-margin_bottom = 53.0
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 90 )
-flat = true
-script = ExtResource( 27 )
-
-[node name="Button8" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
-margin_left = 146.0
-margin_top = -52.0
-margin_right = 218.0
-margin_bottom = 53.0
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 94 )
-flat = true
-script = ExtResource( 18 )
-
-[node name="Button9" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
-margin_left = 215.0
-margin_top = -51.0
-margin_right = 287.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 82 )
-flat = true
-script = ExtResource( 111 )
-
-[node name="Button10" type="Button" parent="HBoxContainer/Area2D/Sprite2"]
-margin_left = 284.0
-margin_top = -52.0
-margin_right = 356.0
-margin_bottom = 53.0
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 73 )
-flat = true
-script = ExtResource( 111 )
+margin_left = -77.5
+margin_top = 224.783
+margin_right = -77.5
+margin_bottom = 224.783
 
 [node name="Timer" type="Timer" parent="HBoxContainer/Area2D/Sprite2"]
 wait_time = 0.01
 
-[node name="Tween" type="Tween" parent="HBoxContainer/Area2D/Sprite2"]
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -376.5
+margin_top = -66.0
+margin_right = 376.5
+
+[node name="Dock" type="Control" parent="CenterContainer"]
+margin_left = 376.0
+margin_top = 33.0
+margin_right = 376.0
+margin_bottom = 33.0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 pause_mode = 2
@@ -383,9 +566,19 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Rkv9Cos8" type="Sprite" parent="HBoxContainer2"]
-position = Vector2( 46.4999, 86.8024 )
+position = Vector2( 41.5, 94.8304 )
 scale = Vector2( 1.8063, 1.53928 )
 texture = ExtResource( 47 )
+
+[node name="PopupPanel2" type="PopupPanel" parent="HBoxContainer2/Rkv9Cos8"]
+margin_left = -261.861
+margin_top = -174.716
+margin_right = -204.861
+margin_bottom = 252.284
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.94
+script = ExtResource( 41 )
 
 [node name="Sprite" type="Sprite" parent="HBoxContainer2"]
 pause_mode = 2
@@ -443,10 +636,10 @@ texture = ExtResource( 97 )
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="."]
 pause_mode = 2
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 182.0
-margin_bottom = 44.0
+margin_left = 64.0
+margin_top = 1.0
+margin_right = 236.0
+margin_bottom = 42.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -455,40 +648,45 @@ position = Vector2( 1041.5, 20 )
 scale = Vector2( 3.81346, 1.24286 )
 texture = ExtResource( 75 )
 
-[node name="Button" type="Button" parent="HBoxContainer3"]
-pause_mode = 2
-margin_right = 74.0
-margin_bottom = 40.0
-icon = ExtResource( 91 )
-flat = true
-script = ExtResource( 24 )
-
-[node name="Timer" type="Timer" parent="HBoxContainer3/Button"]
-wait_time = 0.1
-
 [node name="Button2" type="Button" parent="HBoxContainer3"]
 pause_mode = 2
-margin_left = 78.0
-margin_right = 130.0
-margin_bottom = 40.0
+margin_right = 52.0
+margin_bottom = 41.0
 icon = ExtResource( 77 )
 flat = true
 script = ExtResource( 36 )
 
 [node name="Button3" type="Button" parent="HBoxContainer3"]
-margin_left = 134.0
-margin_right = 178.0
-margin_bottom = 40.0
+margin_left = 56.0
+margin_right = 100.0
+margin_bottom = 41.0
 icon = ExtResource( 70 )
 flat = true
+
+[node name="Button" type="Button" parent="."]
+pause_mode = 2
+margin_left = 3.0
+margin_top = 5.0
+margin_right = 59.0
+margin_bottom = 39.0
+theme = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 68 )
+custom_styles/normal = SubResource( 67 )
+text = "pixel"
+script = ExtResource( 24 )
+
+[node name="Timer" type="Timer" parent="Button"]
+wait_time = 0.1
 
 [node name="Menu" type="PopupMenu" parent="."]
 pause_mode = 2
 margin_left = 3.0
 margin_top = 45.0
-margin_right = 390.0
+margin_right = 298.0
 margin_bottom = 364.0
-theme = SubResource( 4 )
+theme = ExtResource( 25 )
+custom_styles/panel = SubResource( 41 )
 
 [node name="Button" type="Button" parent="Menu"]
 anchor_left = 0.036
@@ -496,57 +694,58 @@ anchor_top = 0.793
 anchor_right = 0.036
 anchor_bottom = 0.793
 margin_left = -3.852
-margin_top = 14.132
+margin_top = 19.132
 margin_right = 107.148
-margin_bottom = 50.132
+margin_bottom = 55.132
 text = "User"
 icon = ExtResource( 48 )
 
 [node name="All Apps2" type="Button" parent="Menu"]
 pause_mode = 2
-margin_left = 117.0
+margin_left = 12.0
 margin_top = 14.0
-margin_right = 211.0
+margin_right = 126.0
 margin_bottom = 34.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Power"
 script = ExtResource( 63 )
 
-[node name="PowerMenu" type="PopupMenu" parent="Menu"]
-margin_left = 360.0
-margin_top = 45.0
-margin_right = 490.0
-margin_bottom = 166.0
+[node name="PowerMenu" type="Control" parent="Menu"]
+visible = false
+margin_left = 134.0
+margin_top = 12.0
+margin_right = 264.0
+margin_bottom = 133.0
 
 [node name="LockScreenLoad" type="Button" parent="Menu/PowerMenu"]
-margin_left = 15.0
-margin_top = 13.0
-margin_right = 115.0
-margin_bottom = 41.0
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 149.0
+margin_bottom = 32.0
 text = "Lock Screen"
 script = ExtResource( 60 )
 
 [node name="ShutDownLoad" type="Button" parent="Menu/PowerMenu"]
-margin_left = 15.0
-margin_top = 46.0
-margin_right = 115.0
-margin_bottom = 74.0
+margin_left = 6.0
+margin_top = 40.0
+margin_right = 149.0
+margin_bottom = 68.0
 text = "Shut Down"
 
 [node name="CloseLoad" type="Button" parent="Menu/PowerMenu"]
-margin_left = 15.0
-margin_top = 79.0
-margin_right = 115.0
-margin_bottom = 107.0
+margin_left = 6.0
+margin_top = 76.0
+margin_right = 149.0
+margin_bottom = 104.0
 text = "Close"
 script = ExtResource( 54 )
 
 [node name="All Apps3" type="Button" parent="Menu"]
 pause_mode = 2
-margin_left = 117.0
+margin_left = 12.0
 margin_top = 39.0
-margin_right = 211.0
+margin_right = 126.0
 margin_bottom = 59.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -555,9 +754,9 @@ script = ExtResource( 120 )
 
 [node name="All Apps4" type="Button" parent="Menu"]
 pause_mode = 2
-margin_left = 117.0
+margin_left = 12.0
 margin_top = 64.0
-margin_right = 211.0
+margin_right = 126.0
 margin_bottom = 84.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -565,98 +764,98 @@ text = "Debug"
 script = ExtResource( 124 )
 
 [node name="AllAppMenu" type="ScrollContainer" parent="Menu"]
-margin_left = 218.0
+margin_left = 133.0
 margin_top = 12.0
-margin_right = 381.0
+margin_right = 284.0
 margin_bottom = 306.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu/AllAppMenu"]
-margin_right = 148.0
-margin_bottom = 634.0
+margin_right = 136.0
+margin_bottom = 568.0
 
 [node name="Button" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_right = 148.0
-margin_bottom = 54.0
+margin_right = 136.0
+margin_bottom = 48.0
 text = "MyPC"
 icon = ExtResource( 78 )
 script = ExtResource( 3 )
 
 [node name="Button2" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_top = 58.0
-margin_right = 148.0
-margin_bottom = 112.0
+margin_top = 52.0
+margin_right = 136.0
+margin_bottom = 100.0
 text = "Browser"
 icon = ExtResource( 84 )
 script = ExtResource( 14 )
 
 [node name="Button3" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_top = 116.0
-margin_right = 148.0
-margin_bottom = 170.0
+margin_top = 104.0
+margin_right = 136.0
+margin_bottom = 152.0
 text = "Music"
 icon = ExtResource( 71 )
 script = ExtResource( 111 )
 
 [node name="Button4" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_top = 174.0
-margin_right = 148.0
-margin_bottom = 228.0
+margin_top = 156.0
+margin_right = 136.0
+margin_bottom = 204.0
 text = "PixelOffice"
 icon = ExtResource( 76 )
 script = ExtResource( 111 )
 
 [node name="Button5" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_top = 232.0
-margin_right = 148.0
-margin_bottom = 286.0
+margin_top = 208.0
+margin_right = 136.0
+margin_bottom = 256.0
 text = "Presenter"
 icon = ExtResource( 89 )
 script = ExtResource( 111 )
 
 [node name="Button6" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_top = 290.0
-margin_right = 148.0
-margin_bottom = 344.0
+margin_top = 260.0
+margin_right = 136.0
+margin_bottom = 308.0
 text = "Spreadsheets"
 icon = ExtResource( 74 )
 script = ExtResource( 111 )
 
 [node name="Button7" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_top = 348.0
-margin_right = 148.0
-margin_bottom = 402.0
+margin_top = 312.0
+margin_right = 136.0
+margin_bottom = 360.0
 text = "Writer"
 icon = ExtResource( 72 )
 script = ExtResource( 53 )
 
 [node name="Button8" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_top = 406.0
-margin_right = 148.0
-margin_bottom = 460.0
+margin_top = 364.0
+margin_right = 136.0
+margin_bottom = 412.0
 text = "Pixel Store"
 icon = ExtResource( 88 )
 script = ExtResource( 27 )
 
 [node name="Button9" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_top = 464.0
-margin_right = 148.0
-margin_bottom = 518.0
+margin_top = 416.0
+margin_right = 136.0
+margin_bottom = 464.0
 text = "Settings"
 icon = ExtResource( 87 )
 script = ExtResource( 18 )
 
 [node name="Button10" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_top = 522.0
-margin_right = 148.0
-margin_bottom = 576.0
+margin_top = 468.0
+margin_right = 136.0
+margin_bottom = 516.0
 text = "Terminal"
 icon = ExtResource( 85 )
 script = ExtResource( 111 )
 
 [node name="Button11" type="Button" parent="Menu/AllAppMenu/VBoxContainer"]
-margin_top = 580.0
-margin_right = 148.0
-margin_bottom = 634.0
+margin_top = 520.0
+margin_right = 136.0
+margin_bottom = 568.0
 text = "Task Manager"
 icon = ExtResource( 51 )
 script = ExtResource( 62 )
@@ -676,6 +875,8 @@ margin_left = 84.0
 margin_top = 44.0
 margin_right = 239.0
 margin_bottom = 130.0
+theme = ExtResource( 25 )
+custom_styles/panel = SubResource( 42 )
 
 [node name="Button" type="Button" parent="HelpMenu"]
 pause_mode = 2
@@ -729,13 +930,20 @@ margin_left = -354.5
 margin_top = -207.5
 margin_right = 354.5
 margin_bottom = 207.5
+rect_min_size = Vector2( 600, 200 )
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 43 )
 window_title = "MyPC"
+resizable = true
 
 [node name="Button" type="Button" parent="myPC"]
+anchor_top = 1.0
+anchor_bottom = 1.0
 margin_left = 7.0
-margin_top = 380.0
+margin_top = -35.0
 margin_right = 98.0
-margin_bottom = 407.0
+margin_bottom = -8.0
 text = "Rename"
 script = ExtResource( 38 )
 
@@ -743,13 +951,15 @@ script = ExtResource( 38 )
 pause_mode = 2
 margin_left = 5.0
 margin_top = 7.0
-margin_right = 211.0
+margin_right = 213.0
 margin_bottom = 372.0
+rect_min_size = Vector2( 0, 50 )
+theme = SubResource( 44 )
 
 [node name="Button" type="Button" parent="myPC/VBoxContainer"]
 pause_mode = 2
-margin_right = 220.0
-margin_bottom = 20.0
+margin_right = 208.0
+margin_bottom = 14.0
 text = "ambiant_piano_with_strings.mp3"
 align = 0
 script = ExtResource( 9 )
@@ -762,34 +972,35 @@ max_distance = 5000.0
 
 [node name="Button2" type="Button" parent="myPC/VBoxContainer"]
 pause_mode = 2
-margin_top = 24.0
-margin_right = 220.0
-margin_bottom = 44.0
+margin_top = 18.0
+margin_right = 208.0
+margin_bottom = 32.0
 text = "pixelos3.png"
 align = 0
 script = ExtResource( 16 )
 
 [node name="readmebutton" type="Button" parent="myPC/VBoxContainer"]
 pause_mode = 2
-margin_top = 48.0
-margin_right = 220.0
-margin_bottom = 68.0
+margin_top = 36.0
+margin_right = 208.0
+margin_bottom = 50.0
 text = "README.wdoc"
 align = 0
 script = ExtResource( 17 )
 
 [node name="Button4" type="Button" parent="myPC/VBoxContainer"]
-margin_top = 72.0
-margin_right = 220.0
-margin_bottom = 92.0
+margin_top = 54.0
+margin_right = 208.0
+margin_bottom = 68.0
 text = "untitled.wdoc"
 align = 0
 script = ExtResource( 31 )
 
 [node name="Button5" type="Button" parent="myPC/VBoxContainer"]
-margin_top = 96.0
-margin_right = 220.0
-margin_bottom = 116.0
+margin_top = 72.0
+margin_right = 208.0
+margin_bottom = 86.0
+size_flags_horizontal = 3
 text = "pixelos1.png"
 align = 0
 script = ExtResource( 15 )
@@ -843,10 +1054,12 @@ scale = Vector2( 0.125207, 0.12732 )
 texture = ExtResource( 99 )
 
 [node name="Button2" type="Button" parent="myPC"]
-margin_left = 106.0
-margin_top = 379.5
-margin_right = 197.0
-margin_bottom = 406.5
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 105.0
+margin_top = -35.0
+margin_right = 196.0
+margin_bottom = -8.0
 text = "Home"
 script = ExtResource( 110 )
 
@@ -874,6 +1087,26 @@ margin_bottom = 170.5
 rect_pivot_offset = Vector2( 19, 7 )
 text = "pixelos3.png"
 
+[node name="DiskSpace" type="ProgressBar" parent="myPC"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -398.0
+margin_top = -35.0
+margin_right = -8.0
+margin_bottom = -8.0
+max_value = 7500.0
+percent_visible = false
+script = ExtResource( 130 )
+
+[node name="Label" type="Label" parent="myPC/DiskSpace"]
+margin_left = 3.0
+margin_top = -16.0
+margin_right = 173.0
+margin_bottom = -2.0
+text = "Disk Space (7.5GB Free / 8GB)"
+
 [node name="Music Player" type="WindowDialog" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -883,14 +1116,27 @@ margin_left = -272.5
 margin_top = -182.5
 margin_right = 272.5
 margin_bottom = 182.5
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 45 )
 window_title = "Music Player"
+resizable = true
 script = ExtResource( 59 )
 
 [node name="AudioProgress" type="ProgressBar" parent="Music Player"]
-margin_left = 44.0
-margin_top = 329.0
-margin_right = 499.0
-margin_bottom = 352.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -228.5
+margin_top = -36.0
+margin_right = 226.5
+margin_bottom = -13.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.07
 max_value = 217.0
 step = 1.0
 script = ExtResource( 37 )
@@ -928,6 +1174,9 @@ margin_left = -180.5
 margin_top = -61.5
 margin_right = 180.5
 margin_bottom = 61.5
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 60 )
 window_title = "Rename File"
 
 [node name="TextEdit" type="LineEdit" parent="RenameFrame"]
@@ -969,6 +1218,8 @@ margin_left = -218.5
 margin_top = -178.5
 margin_right = 218.5
 margin_bottom = 178.5
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 38 )
 window_title = "pixelos3 - Image View"
 
 [node name="Sprite" type="Sprite" parent="ImageView"]
@@ -986,17 +1237,22 @@ margin_left = -297.5
 margin_top = -212.5
 margin_right = 297.5
 margin_bottom = 212.5
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 39 )
 window_title = "README - Writer"
 
 [node name="TextEdit" type="TextEdit" parent="PixelWriter"]
-anchor_left = 0.274
-anchor_top = 0.092
-anchor_right = 0.274
-anchor_bottom = 0.092
-margin_left = -0.030014
-margin_top = -0.100002
-margin_right = 264.97
-margin_bottom = 366.9
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -132.5
+margin_top = -167.5
+margin_right = 132.5
+margin_bottom = 199.5
+size_flags_horizontal = 7
+size_flags_vertical = 7
 text = " Welcome to PixelOS 7. It is the
  succesor of PixelOS 6/X on Scratch. As
  of writing this document, it is currently
@@ -1006,25 +1262,25 @@ text = " Welcome to PixelOS 7. It is the
  also edit this text on this document if
  you want as well. This document was
  written back in late April"
+wrap_enabled = true
 
 [node name="OptionButton" type="OptionButton" parent="PixelWriter"]
-anchor_left = 0.793
-anchor_top = 0.016
-anchor_right = 0.793
-anchor_bottom = 0.016
-margin_left = 0.164978
-margin_top = 0.2
-margin_right = 115.165
-margin_bottom = 25.2
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -123.0
+margin_top = 7.0
+margin_right = -8.0
+margin_bottom = 32.0
 text = "Edit Mode"
 script = ExtResource( 26 )
 
 [node name="Button" type="Button" parent="PixelWriter"]
-margin_left = 395.0
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -200.0
 margin_top = 7.0
-margin_right = 467.0
+margin_right = -128.0
 margin_bottom = 32.0
-theme = SubResource( 7 )
 text = "Set Mode"
 script = ExtResource( 28 )
 
@@ -1042,38 +1298,14 @@ text = " Feel free to add anything to
  this document :)"
 
 [node name="CharacterCount" type="Label" parent="PixelWriter"]
+anchor_top = 1.0
+anchor_bottom = 1.0
 margin_left = 14.0
-margin_top = 401.0
+margin_top = -24.0
 margin_right = 93.0
-margin_bottom = 415.0
+margin_bottom = -10.0
 text = "0 Characters"
 script = ExtResource( 57 )
-
-[node name="Note" type="AcceptDialog" parent="."]
-pause_mode = 2
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -149.0
-margin_top = -76.5
-margin_right = 149.0
-margin_bottom = 76.5
-window_title = "Note"
-script = ExtResource( 25 )
-
-[node name="Label2" type="Label" parent="Note"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 290.0
-margin_bottom = 117.0
-text = "PixelOS 7 is currently in beta. There may be
-bugs that may occur. Please report bugs if
-you can on the Itch.io page, Discord, or the
-GitHub page. You can find the invite for the
-Discord in the page description."
-
-[node name="Timer" type="Timer" parent="Note"]
 
 [node name="WriterHome" type="WindowDialog" parent="."]
 pause_mode = 2
@@ -1085,41 +1317,36 @@ margin_left = -277.5
 margin_top = -177.0
 margin_right = 277.5
 margin_bottom = 177.0
+rect_min_size = Vector2( 233, 187 )
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 61 )
 window_title = "Writer Home"
+resizable = true
 
 [node name="Button" type="Button" parent="WriterHome"]
-anchor_left = 0.016
-anchor_top = 0.466
-anchor_right = 0.016
-anchor_bottom = 0.466
-margin_left = 0.12
-margin_top = 0.0359955
-margin_right = 102.12
-margin_bottom = 125.036
+margin_left = 8.0
+margin_top = 10.0
+margin_right = 110.0
+margin_bottom = 135.0
 text = "README.wdoc"
 script = ExtResource( 17 )
 
 [node name="Button2" type="Button" parent="WriterHome"]
-anchor_left = 0.016
-anchor_top = 0.89
-anchor_right = 0.016
-anchor_bottom = 0.89
-margin_left = 0.12
-margin_top = -0.0600281
-margin_right = 91.12
-margin_bottom = 29.94
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 9.0
+margin_top = -41.0
+margin_right = 100.0
+margin_bottom = -10.9999
 text = "Open"
 script = ExtResource( 3 )
 
 [node name="Button3" type="Button" parent="WriterHome"]
-anchor_left = 0.016
-anchor_top = 0.466
-anchor_right = 0.016
-anchor_bottom = 0.466
-margin_left = 112.12
-margin_top = 0.0359955
-margin_right = 214.12
-margin_bottom = 125.036
+margin_left = 119.0
+margin_top = 11.0
+margin_right = 221.0
+margin_bottom = 136.0
 text = "untitled.wdoc"
 script = ExtResource( 31 )
 
@@ -1133,6 +1360,9 @@ margin_left = -136.5
 margin_top = -61.5
 margin_right = 136.5
 margin_bottom = 61.5
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 33 )
 window_title = "System"
 
 [node name="Label" type="Label" parent="ConfirmSignOut"]
@@ -1172,6 +1402,9 @@ margin_left = -414.5
 margin_top = -252.5
 margin_right = 414.5
 margin_bottom = 252.5
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 34 )
 window_title = "Pixel Browser"
 script = ExtResource( 35 )
 
@@ -1483,9 +1716,15 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -311.5
 margin_top = -201.0
-margin_right = 311.5
+margin_right = 296.5
 margin_bottom = 201.0
+rect_min_size = Vector2( 364, 297 )
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_constants/scaleborder_size = 5
+custom_styles/panel = SubResource( 35 )
 window_title = "Task Manager"
+resizable = true
 script = ExtResource( 109 )
 
 [node name="Button" type="Button" parent="TaskManager"]
@@ -1548,6 +1787,20 @@ margin_right = 86.0
 margin_bottom = 50.0
 text = "Settings"
 
+[node name="PixelStore" type="Label" parent="TaskManager/Button/VBoxContainer"]
+visible = false
+margin_top = 36.0
+margin_right = 86.0
+margin_bottom = 50.0
+text = "Pixel Store"
+
+[node name="ClickerTest" type="Label" parent="TaskManager/Button/VBoxContainer"]
+visible = false
+margin_top = 54.0
+margin_right = 86.0
+margin_bottom = 68.0
+text = "Clicker Test"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="TaskManager"]
 margin_left = 187.0
 margin_top = 67.0
@@ -1601,6 +1854,20 @@ margin_right = 86.0
 margin_bottom = 50.0
 text = "Settings"
 
+[node name="StoreUsage" type="Label" parent="TaskManager/VBoxContainer"]
+visible = false
+margin_top = 36.0
+margin_right = 86.0
+margin_bottom = 50.0
+text = "Settings"
+
+[node name="ClickerUsage" type="Label" parent="TaskManager/VBoxContainer"]
+visible = false
+margin_top = 36.0
+margin_right = 86.0
+margin_bottom = 50.0
+text = "Settings"
+
 [node name="Timer" type="Timer" parent="TaskManager/VBoxContainer"]
 wait_time = 1.5
 
@@ -1617,6 +1884,12 @@ wait_time = 1.5
 wait_time = 1.5
 
 [node name="MyPC" type="Timer" parent="TaskManager/VBoxContainer"]
+wait_time = 1.5
+
+[node name="Store" type="Timer" parent="TaskManager/VBoxContainer"]
+wait_time = 1.5
+
+[node name="ClickerGame" type="Timer" parent="TaskManager/VBoxContainer"]
 wait_time = 1.5
 
 [node name="OptionButton" type="OptionButton" parent="TaskManager"]
@@ -1651,6 +1924,9 @@ margin_left = -188.0
 margin_top = -110.5
 margin_right = 188.0
 margin_bottom = 110.5
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 46 )
 window_title = "Browser Settings"
 
 [node name="OptionButton" type="OptionButton" parent="BrowserSettings"]
@@ -1670,18 +1946,23 @@ text = "Apply Changes"
 script = ExtResource( 5 )
 
 [node name="CheckButton" type="CheckButton" parent="BrowserSettings"]
-margin_left = 211.0
-margin_right = 376.0
-margin_bottom = 40.0
+margin_left = 204.5
+margin_top = 7.5
+margin_right = 369.5
+margin_bottom = 47.5
 rect_rotation = 0.594108
 text = "Track Activity"
 
-[node name="Alert Tabs" type="AcceptDialog" parent="."]
+[node name="Alert Tabs" type="WindowDialog" parent="."]
+pause_mode = 2
 margin_left = 313.0
 margin_top = 242.0
 margin_right = 683.0
-margin_bottom = 334.0
+margin_bottom = 343.0
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 47 )
 window_title = "Creating Tabs is Temperarally Disabled"
+script = ExtResource( 133 )
 
 [node name="Label2" type="Label" parent="Alert Tabs"]
 margin_left = 8.0
@@ -1691,6 +1972,14 @@ margin_bottom = 56.0
 text = "Tabs as of right now are still extremely unfinished and
 broken. Use and creation of tabs has been temperarally
 disabled until they are fixed."
+
+[node name="Button" type="Button" parent="Alert Tabs"]
+margin_left = 9.0
+margin_top = 65.0
+margin_right = 77.0
+margin_bottom = 92.0
+theme = ExtResource( 25 )
+text = "OK"
 
 [node name="VBoxContainer" type="HBoxContainer" parent="."]
 pause_mode = 2
@@ -1707,6 +1996,7 @@ margin_right = 79.0
 margin_bottom = 33.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource( 25 )
 text = "test"
 script = ExtResource( 13 )
 
@@ -1718,6 +2008,8 @@ margin_left = -298.0
 margin_top = 54.0
 margin_right = -6.0
 margin_bottom = 261.0
+theme = ExtResource( 25 )
+custom_styles/panel = SubResource( 48 )
 
 [node name="Button" type="Button" parent="Control Panel"]
 margin_left = 211.0
@@ -1764,14 +2056,22 @@ margin_left = -281.5
 margin_top = -189.0
 margin_right = 281.5
 margin_bottom = 189.0
+rect_min_size = Vector2( 421, 276 )
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 0.996078 )
+custom_constants/scaleborder_size = 5
+custom_styles/panel = SubResource( 32 )
 window_title = "Settings"
+resizable = true
 script = ExtResource( 125 )
 
 [node name="Button" type="Button" parent="MainSettings"]
+anchor_top = 1.0
+anchor_bottom = 1.0
 margin_left = 8.0
-margin_top = 342.0
+margin_top = -36.0
 margin_right = 178.0
-margin_bottom = 370.0
+margin_bottom = -8.0
 text = "Reset to Default Settings"
 script = ExtResource( 8 )
 
@@ -1785,12 +2085,13 @@ margin_bottom = 216.0
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 288.0
-margin_bottom = 82.0
+margin_bottom = 88.0
 text = "Are you sure you want to reset all settings
 to their default settings? This cannot be
 undone."
 
 [node name="OptionButton" type="OptionButton" parent="MainSettings"]
+visible = false
 margin_left = 15.0
 margin_top = 56.0
 margin_right = 132.0
@@ -1799,6 +2100,7 @@ text = "Center"
 script = ExtResource( 21 )
 
 [node name="Label" type="Label" parent="MainSettings"]
+visible = false
 margin_left = 15.0
 margin_top = 36.0
 margin_right = 103.0
@@ -1806,6 +2108,7 @@ margin_bottom = 50.0
 text = "Dock Position"
 
 [node name="Button2" type="Button" parent="MainSettings"]
+visible = false
 margin_left = 137.0
 margin_top = 56.0
 margin_right = 199.0
@@ -1815,32 +2118,36 @@ script = ExtResource( 2 )
 
 [node name="Label2" type="Label" parent="MainSettings"]
 margin_left = 15.0
-margin_top = 94.0
+margin_top = 26.0
 margin_right = 103.0
-margin_bottom = 108.0
+margin_bottom = 40.0
 text = "Wallpaper"
 
 [node name="OptionButton2" type="OptionButton" parent="MainSettings"]
 margin_left = 15.0
-margin_top = 113.0
+margin_top = 45.0
 margin_right = 132.0
-margin_bottom = 137.0
+margin_bottom = 69.0
 text = "PixelOS 7"
 script = ExtResource( 11 )
 
 [node name="Button3" type="Button" parent="MainSettings"]
 margin_left = 137.0
-margin_top = 113.0
+margin_top = 45.0
 margin_right = 199.0
-margin_bottom = 137.0
+margin_bottom = 69.0
 text = "Apply"
 script = ExtResource( 6 )
 
 [node name="CheckButton" type="CheckButton" parent="MainSettings"]
-margin_left = 347.0
-margin_top = 24.0
-margin_right = 559.0
-margin_bottom = 64.0
+anchor_left = 0.993
+anchor_top = 0.063
+anchor_right = 0.993
+anchor_bottom = 0.063
+margin_left = -212.059
+margin_top = 0.185999
+margin_right = -0.059021
+margin_bottom = 40.186
 text = "Hide Taskbar & Dock"
 
 [node name="TaskBarIcons" type="Control" parent="MainSettings"]
@@ -1848,52 +2155,56 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Help" type="CheckBox" parent="MainSettings/TaskBarIcons"]
-margin_left = 416.0
-margin_top = 90.0
-margin_right = 474.0
-margin_bottom = 114.0
+margin_left = 14.0
+margin_top = 166.0
+margin_right = 72.0
+margin_bottom = 190.0
 text = "Help"
 
 [node name="Label" type="Label" parent="MainSettings/TaskBarIcons"]
-margin_left = 421.0
-margin_top = 76.0
-margin_right = 539.0
-margin_bottom = 90.0
+anchor_left = 13.711
+anchor_top = 1.0
+anchor_right = 13.711
+anchor_bottom = 1.0
+margin_left = -529.44
+margin_top = 112.0
+margin_right = -411.44
+margin_bottom = 126.0
 text = "Show Taskbar Tabs"
 
 [node name="Help2" type="CheckBox" parent="MainSettings/TaskBarIcons"]
-margin_left = 416.0
-margin_top = 111.0
-margin_right = 474.0
-margin_bottom = 135.0
+margin_left = 14.0
+margin_top = 187.0
+margin_right = 72.0
+margin_bottom = 211.0
 text = "File"
 
 [node name="Help3" type="CheckBox" parent="MainSettings/TaskBarIcons"]
-margin_left = 416.0
-margin_top = 133.0
-margin_right = 474.0
-margin_bottom = 157.0
+margin_left = 14.0
+margin_top = 209.0
+margin_right = 127.0
+margin_bottom = 233.0
 text = "Control Panel"
 
 [node name="Label3" type="Label" parent="MainSettings"]
 margin_left = 17.0
-margin_top = 158.0
+margin_top = 90.0
 margin_right = 213.0
-margin_bottom = 172.0
+margin_bottom = 104.0
 text = "Display Size (for dock position)"
 
 [node name="Button4" type="Button" parent="MainSettings"]
 margin_left = 18.0
-margin_top = 180.0
+margin_top = 112.0
 margin_right = 63.0
-margin_bottom = 200.0
+margin_bottom = 132.0
 text = "Wide"
 
 [node name="Button5" type="Button" parent="MainSettings"]
 margin_left = 72.0
-margin_top = 180.0
-margin_right = 117.0
-margin_bottom = 200.0
+margin_top = 112.0
+margin_right = 123.0
+margin_bottom = 132.0
 disabled = true
 text = "Average"
 
@@ -1907,6 +2218,9 @@ margin_left = -203.5
 margin_top = -121.5
 margin_right = 203.5
 margin_bottom = 121.5
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 49 )
 window_title = "About"
 
 [node name="Label" type="Label" parent="About"]
@@ -1926,7 +2240,7 @@ margin_left = 24.0
 margin_top = 90.0
 margin_right = 112.0
 margin_bottom = 104.0
-text = "Version: BETA 0.2"
+text = "Version: Alpha 0.3.1"
 
 [node name="Label3" type="Label" parent="About"]
 margin_left = 24.0
@@ -1967,7 +2281,7 @@ script = ExtResource( 29 )
 [node name="Timer" type="Timer" parent="About/Button"]
 wait_time = 2.0
 
-[node name="uh oh buddy" type="AcceptDialog" parent="."]
+[node name="uh oh buddy" type="WindowDialog" parent="."]
 pause_mode = 2
 anchor_left = 0.5
 anchor_top = 0.5
@@ -1976,8 +2290,12 @@ anchor_bottom = 0.5
 margin_left = -155.5
 margin_top = -45.0
 margin_right = 156.5
-margin_bottom = 64.0
+margin_bottom = 81.0
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 50 )
 window_title = "Uh Oh Buddy"
+script = ExtResource( 134 )
 
 [node name="Label2" type="Label" parent="uh oh buddy"]
 margin_left = 8.0
@@ -1985,9 +2303,16 @@ margin_top = 8.0
 margin_right = 304.0
 margin_bottom = 73.0
 text = "Uh-Oh, Buddy. It looks like you searched for 
-something not approved by the Government.
+something not approved by the government.
 Your search has been reported to the NIA and
 will be subject to review."
+
+[node name="Button" type="Button" parent="uh oh buddy"]
+margin_left = 9.0
+margin_top = 90.0
+margin_right = 77.0
+margin_bottom = 117.0
+text = "OK"
 
 [node name="ImageView2" type="WindowDialog" parent="."]
 pause_mode = 2
@@ -1999,6 +2324,8 @@ margin_left = -218.5
 margin_top = -172.0
 margin_right = 218.5
 margin_bottom = 172.0
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 62 )
 window_title = "pixelos1 - Image View"
 
 [node name="Sprite" type="Sprite" parent="ImageView2"]
@@ -2031,17 +2358,21 @@ icon = ExtResource( 106 )
 flat = true
 align = 0
 
-[node name="Error" type="AcceptDialog" parent="."]
+[node name="Error" type="WindowDialog" parent="."]
 pause_mode = 2
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -221.0
-margin_top = -41.5
-margin_right = 221.0
-margin_bottom = 41.5
+margin_left = -220.5
+margin_top = -41.0
+margin_right = 221.5
+margin_bottom = 46.0
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 59 )
 window_title = "Error"
+script = ExtResource( 135 )
 
 [node name="Label2" type="Label" parent="Error"]
 margin_left = 8.0
@@ -2050,6 +2381,13 @@ margin_right = 434.0
 margin_bottom = 47.0
 text = "Unfortunately, this application is currently under development and
 cannot be opened."
+
+[node name="Button" type="Button" parent="Error"]
+margin_left = 9.0
+margin_top = 51.0
+margin_right = 77.0
+margin_bottom = 78.0
+text = "OK"
 
 [node name="Welcome" type="WindowDialog" parent="."]
 pause_mode = 2
@@ -2061,7 +2399,9 @@ margin_left = -169.5
 margin_top = -172.0
 margin_right = 409.5
 margin_bottom = 156.0
-theme = SubResource( 20 )
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 51 )
 window_title = "Welcome to PixelOS GD"
 script = ExtResource( 114 )
 
@@ -2083,7 +2423,6 @@ margin_left = 424.0
 margin_top = 16.0
 margin_right = 572.0
 margin_bottom = 41.0
-theme = SubResource( 21 )
 text = "Download Source"
 script = ExtResource( 112 )
 
@@ -2113,16 +2452,19 @@ margin_right = 572.0
 margin_bottom = 137.0
 text = "FAQ"
 
-[node name="WebWarning" type="ConfirmationDialog" parent="."]
+[node name="WebWarning" type="WindowDialog" parent="."]
 pause_mode = 2
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -151.5
-margin_top = -37.5
+margin_top = -37.0
 margin_right = 151.5
-margin_bottom = 37.5
+margin_bottom = 48.0
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 52 )
 window_title = "Warning"
 script = ExtResource( 123 )
 
@@ -2134,6 +2476,20 @@ margin_bottom = 39.0
 text = "You are about to be redirected off of PixelOS
 and onto a website. Proceed?"
 
+[node name="Button" type="Button" parent="WebWarning"]
+margin_left = 9.0
+margin_top = 49.0
+margin_right = 77.0
+margin_bottom = 76.0
+text = "OK"
+
+[node name="Button2" type="Button" parent="WebWarning"]
+margin_left = 87.0
+margin_top = 49.0
+margin_right = 155.0
+margin_bottom = 76.0
+text = "Cancel"
+
 [node name="Controls" type="WindowDialog" parent="."]
 pause_mode = 2
 anchor_left = 0.5
@@ -2144,6 +2500,8 @@ margin_left = -95.5
 margin_top = -40.5
 margin_right = 95.5
 margin_bottom = 40.5
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 55 )
 window_title = "Controls"
 
 [node name="Label" type="Label" parent="Controls"]
@@ -2188,6 +2546,9 @@ margin_left = -177.5
 margin_top = -161.0
 margin_right = 178.5
 margin_bottom = 218.0
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 56 )
 window_title = "Calculator"
 script = ExtResource( 119 )
 
@@ -2293,7 +2654,7 @@ margin_top = 102.0
 margin_right = 347.0
 margin_bottom = 206.0
 size_flags_horizontal = 3
-theme = SubResource( 15 )
+theme = SubResource( 58 )
 text = "+"
 
 [node name="Display" type="Label" parent="Calculator"]
@@ -2359,7 +2720,7 @@ theme = SubResource( 15 )
 text = "÷"
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-script = ExtResource( 121 )
+script = ExtResource( 4 )
 
 [node name="Debug" type="WindowDialog" parent="."]
 pause_mode = 2
@@ -2371,7 +2732,12 @@ margin_left = -223.5
 margin_top = -143.5
 margin_right = 223.5
 margin_bottom = 143.5
+rect_min_size = Vector2( 182, 133 )
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 53 )
 window_title = "Debug"
+resizable = true
 script = ExtResource( 122 )
 
 [node name="Wallpaper" type="Label" parent="Debug"]
@@ -2398,16 +2764,20 @@ margin_bottom = 89.0
 text = "music_playing = false"
 
 [node name="Button" type="Button" parent="Debug"]
+anchor_top = 1.0
+anchor_bottom = 1.0
 margin_left = 8.0
-margin_top = 260.0
-margin_right = 127.0
-margin_bottom = 280.0
+margin_top = -36.5
+margin_right = 174.0
+margin_bottom = -8.5
 text = "Go to GitHub Repository"
 
 [node name="fps" type="Label" parent="Debug"]
 margin_top = 61.0
 margin_right = 200.0
 margin_bottom = 75.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 text = "fps = 0"
 
 [node name="DocOpened" type="Label" parent="Debug"]
@@ -2423,7 +2793,7 @@ margin_left = 8.0
 margin_top = -33.0
 margin_right = 148.0
 margin_bottom = -19.0
-text = "PixelOS GD Alpha 0.2"
+text = "PixelOS GD Alpha 0.3"
 
 [node name="Label2" type="Label" parent="."]
 anchor_top = 1.0
@@ -2439,6 +2809,9 @@ margin_left = 298.0
 margin_top = 109.0
 margin_right = 876.0
 margin_bottom = 526.0
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 37 )
 window_title = "Pixel Store"
 script = ExtResource( 127 )
 
@@ -2480,25 +2853,35 @@ margin_right = 288.0
 margin_bottom = 207.5
 
 [node name="Label" type="Label" parent="Store/StorePage"]
-margin_left = 6.0
-margin_top = 17.0
-margin_right = 74.0
-margin_bottom = 57.0
+anchor_left = 0.01
+anchor_top = 0.041
+anchor_right = 0.01
+anchor_bottom = 0.041
+margin_left = 0.24
+margin_top = -0.0150013
+margin_right = 68.24
+margin_bottom = 39.985
 theme = SubResource( 23 )
 text = "New"
 
 [node name="ClickerTesticon" type="Button" parent="Store/StorePage"]
-margin_left = 13.0
-margin_top = 64.0
-margin_right = 95.0
-margin_bottom = 140.0
+anchor_left = 0.023
+anchor_top = 0.154
+anchor_right = 0.023
+anchor_bottom = 0.154
+margin_left = -0.248001
+margin_top = 0.0899925
+margin_right = 81.752
+margin_bottom = 76.09
 icon = ExtResource( 19 )
 
 [node name="Label" type="Label" parent="Store/StorePage/ClickerTesticon"]
+anchor_top = 1.092
+anchor_bottom = 1.092
 margin_left = 3.0
-margin_top = 83.0
+margin_top = 0.00799561
 margin_right = 77.0
-margin_bottom = 97.0
+margin_bottom = 14.008
 text = "Clicker Test"
 
 [node name="WaitforDownload" type="Timer" parent="Store"]
@@ -2508,11 +2891,19 @@ wait_time = 1.5
 
 [node name="UninstallSpeed" type="Timer" parent="Store"]
 
-[node name="StorePopup" type="AcceptDialog" parent="Store"]
-margin_left = 291.0
-margin_top = 263.0
-margin_right = 519.0
-margin_bottom = 321.0
+[node name="StorePopup" type="WindowDialog" parent="Store"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -115.0
+margin_top = -35.5
+margin_right = 115.0
+margin_bottom = 35.5
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 40 )
 window_title = "Store"
 
 [node name="Label2" type="Label" parent="Store/StorePopup"]
@@ -2521,6 +2912,14 @@ margin_top = 8.0
 margin_right = 220.0
 margin_bottom = 22.0
 text = "Clicker Test Succesfully installed."
+
+[node name="Button" type="Button" parent="Store/StorePopup"]
+margin_left = 10.0
+margin_top = 35.0
+margin_right = 78.0
+margin_bottom = 62.0
+text = "OK"
+script = ExtResource( 132 )
 
 [node name="ClickerTest" type="WindowDialog" parent="."]
 anchor_left = 0.5
@@ -2531,6 +2930,9 @@ margin_left = -141.0
 margin_top = -241.5
 margin_right = 141.0
 margin_bottom = 241.5
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 54 )
 window_title = "Clicker Test"
 script = ExtResource( 128 )
 
@@ -2580,20 +2982,67 @@ text = "Auto Clicker - $50"
 
 [node name="AutoClicker" type="Timer" parent="ClickerTest"]
 
-[connection signal="timeout" from="HBoxContainer/Area2D/Sprite2/Timer" to="HBoxContainer/Area2D/Sprite2" method="_on_Timer_timeout"]
-[connection signal="timeout" from="HBoxContainer3/Button/Timer" to="HBoxContainer3/Button" method="_on_Timer_timeout"]
+[node name="Note" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -149.5
+margin_top = -66.0
+margin_right = 149.5
+margin_bottom = 66.0
+theme = ExtResource( 25 )
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_styles/panel = SubResource( 36 )
+window_title = "Note"
+script = ExtResource( 131 )
+
+[node name="Label2" type="Label" parent="Note"]
+margin_left = 8.0
+margin_top = 5.0
+margin_right = 294.0
+margin_bottom = 114.0
+text = "PixelOS 7 is currently in alpha. There may be
+bugs that may occur. Please report bugs if
+you can on the Itch.io page, Discord, or the
+GitHub page. You can find the invite for the
+Discord in the page description."
+
+[node name="Button" type="Button" parent="Note"]
+margin_left = 9.0
+margin_top = 96.0
+margin_right = 77.0
+margin_bottom = 123.0
+text = "OK"
+
+[node name="Timer" type="Timer" parent="Note"]
+
+[node name="VBoxContainer3" type="CenterContainer" parent="."]
+anchor_top = 0.536
+anchor_bottom = 0.536
+margin_top = -236.6
+margin_right = 69.0
+margin_bottom = -73.6
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Dock" parent="." instance=ExtResource( 44 )]
+margin_left = 7.0
+margin_top = 44.0
+margin_right = -928.0
+margin_bottom = -25.0
+
+[connection signal="timeout" from="Button/Timer" to="Button" method="_on_Timer_timeout"]
 [connection signal="pressed" from="myPC/VBoxContainer/readmebutton" to="PixelWriter/CharacterCount" method="_on_readmebutton_pressed"]
 [connection signal="pressed" from="myPC/VBoxContainer/Button4" to="PixelWriter/CharacterCount" method="_on_Button4_pressed"]
 [connection signal="hide" from="Music Player" to="Music Player" method="_on_Music_Player_hide"]
 [connection signal="timeout" from="Music Player/AudioProgress/Timer" to="Music Player/AudioProgress" method="_on_Timer_timeout"]
-[connection signal="confirmed" from="Note" to="Welcome" method="_on_Note_confirmed"]
-[connection signal="timeout" from="Note/Timer" to="Note" method="_on_Timer_timeout"]
 [connection signal="pressed" from="WriterHome/Button" to="PixelWriter/CharacterCount" method="_on_Button_pressed"]
 [connection signal="pressed" from="WriterHome/Button3" to="PixelWriter/CharacterCount" method="_on_Button3_pressed"]
 [connection signal="hide" from="ConfirmSignOut" to="ConfirmSignOut/Label" method="_on_ConfirmSignOut_hide"]
 [connection signal="timeout" from="ConfirmSignOut/Label/Timer" to="ConfirmSignOut/Label" method="_on_Timer_timeout"]
-[connection signal="pressed" from="Browser/CreateTab" to="Browser" method="_on_CreateTab_pressed"]
 [connection signal="pressed" from="Browser/CreateTab" to="Browser" method="_on_Button_pressed"]
+[connection signal="pressed" from="Browser/CreateTab" to="Browser" method="_on_CreateTab_pressed"]
 [connection signal="pressed" from="Browser/CreateTab" to="Browser/Button2" method="_on_Button_pressed"]
 [connection signal="pressed" from="Browser/HBoxContainer/Tab1" to="Browser" method="_on_Tab1_pressed"]
 [connection signal="pressed" from="Browser/HBoxContainer/Tab2" to="Browser" method="_on_Tab2_pressed"]
@@ -2610,8 +3059,6 @@ text = "Auto Clicker - $50"
 [connection signal="pressed" from="Browser/Home" to="Browser" method="_on_Home_pressed"]
 [connection signal="text_entered" from="Browser/Eveulu Search/LineEdit2" to="Browser" method="_on_LineEdit2_text_entered"]
 [connection signal="pressed" from="Browser/Eveulu Search/Button3" to="Browser" method="_on_Button3_pressed"]
-[connection signal="hide" from="TaskManager" to="HBoxContainer/Area2D/Sprite2/Button" method="_on_TaskManager_hide"]
-[connection signal="popup_hide" from="TaskManager" to="HBoxContainer/Area2D/Sprite2/Button" method="_on_TaskManager_popup_hide"]
 [connection signal="timeout" from="TaskManager/VBoxContainer/Timer" to="TaskManager/VBoxContainer" method="_on_Timer_timeout"]
 [connection signal="timeout" from="TaskManager/VBoxContainer/Browser" to="TaskManager" method="_on_Browser_timeout"]
 [connection signal="timeout" from="TaskManager/VBoxContainer/MusicPlayer" to="TaskManager" method="_on_MusicPlayer_timeout"]
@@ -2619,10 +3066,12 @@ text = "Auto Clicker - $50"
 [connection signal="timeout" from="TaskManager/VBoxContainer/Writer" to="TaskManager" method="_on_Writer_timeout"]
 [connection signal="timeout" from="TaskManager/VBoxContainer/Settings" to="TaskManager" method="_on_Settings_timeout"]
 [connection signal="timeout" from="TaskManager/VBoxContainer/MyPC" to="TaskManager" method="_on_MyPC_timeout"]
+[connection signal="timeout" from="TaskManager/VBoxContainer/Store" to="TaskManager" method="_on_Store_timeout"]
+[connection signal="timeout" from="TaskManager/VBoxContainer/ClickerGame" to="TaskManager" method="_on_ClickerGame_timeout"]
 [connection signal="timeout" from="TaskManager/Timer" to="TaskManager" method="_on_Timer_timeout"]
 [connection signal="pressed" from="BrowserSettings/Button" to="Browser" method="_on_Button_pressed"]
 [connection signal="pressed" from="BrowserSettings/Button" to="Browser/LineEdit" method="_on_Button_pressed"]
-[connection signal="confirmed" from="Alert Tabs" to="HBoxContainer/Area2D/Sprite2/Button2" method="_on_Alert_Tabs_confirmed"]
+[connection signal="pressed" from="Alert Tabs/Button" to="Alert Tabs" method="_on_Button_pressed"]
 [connection signal="confirmed" from="MainSettings/ConfirmationDialog" to="MainSettings" method="_on_ConfirmationDialog_confirmed"]
 [connection signal="confirmed" from="MainSettings/ConfirmationDialog" to="MainSettings/OptionButton" method="_on_ConfirmationDialog_confirmed"]
 [connection signal="confirmed" from="MainSettings/ConfirmationDialog" to="MainSettings/Button2" method="_on_ConfirmationDialog_confirmed"]
@@ -2634,11 +3083,14 @@ text = "Auto Clicker - $50"
 [connection signal="pressed" from="MainSettings/Button4" to="MainSettings/Button2" method="_on_wide_pressed"]
 [connection signal="pressed" from="MainSettings/Button5" to="MainSettings/Button2" method="_on_average_pressed"]
 [connection signal="timeout" from="About/Button/Timer" to="About/Button" method="_on_Timer_timeout"]
+[connection signal="pressed" from="uh oh buddy/Button" to="uh oh buddy" method="_on_Button_pressed"]
+[connection signal="pressed" from="Error/Button" to="Error" method="_on_Button_pressed"]
 [connection signal="pressed" from="Welcome/Button" to="WebWarning" method="_on_Button2_pressed"]
 [connection signal="timeout" from="Welcome/Timer" to="Welcome" method="_on_Timer_timeout"]
 [connection signal="pressed" from="Welcome/Button4" to="Browser" method="_on_FAQ_pressed"]
 [connection signal="pressed" from="Welcome/Button4" to="Welcome" method="_on_Button4_pressed"]
-[connection signal="confirmed" from="WebWarning" to="WebWarning" method="_on_WebWarning_confirmed"]
+[connection signal="pressed" from="WebWarning/Button" to="WebWarning" method="_on_OK_pressed"]
+[connection signal="pressed" from="WebWarning/Button2" to="WebWarning" method="_on_Cancel_pressed"]
 [connection signal="body_entered" from="HBoxContainer4/Area2D" to="HBoxContainer4/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="pressed" from="Calculator/HBoxContainer/7" to="Calculator" method="_on_7_pressed"]
 [connection signal="pressed" from="Calculator/HBoxContainer/8" to="Calculator" method="_on_8_pressed"]
@@ -2658,12 +3110,17 @@ text = "Auto Clicker - $50"
 [connection signal="pressed" from="Calculator/Divide" to="Calculator" method="_on_Divide_pressed"]
 [connection signal="pressed" from="Debug/Button" to="WebWarning" method="_on_Button_pressed"]
 [connection signal="pressed" from="Debug/Button" to="Debug" method="_on_Button_pressed"]
+[connection signal="pressed" from="Store/AppPage/Download" to="myPC/DiskSpace" method="_on_Download_pressed"]
 [connection signal="pressed" from="Store/AppPage/Download" to="Store" method="_on_Download_pressed"]
 [connection signal="pressed" from="Store/StorePage/ClickerTesticon" to="Store" method="_on_ClickerTesticon_pressed"]
 [connection signal="timeout" from="Store/WaitforDownload" to="Store" method="_on_WaitforDownload_timeout"]
 [connection signal="timeout" from="Store/DownloadSpeed" to="Store" method="_on_DownloadSpeed_timeout"]
 [connection signal="timeout" from="Store/UninstallSpeed" to="Store" method="_on_UninstallSpeed_timeout"]
+[connection signal="pressed" from="Store/StorePopup/Button" to="myPC/DiskSpace" method="_on_Button_pressed"]
 [connection signal="pressed" from="ClickerTest/Button" to="ClickerTest" method="_on_Button_pressed"]
 [connection signal="pressed" from="ClickerTest/Button2" to="ClickerTest" method="_on_upgrade_click_pressed"]
 [connection signal="pressed" from="ClickerTest/Button3" to="ClickerTest" method="_on_AutoClick_pressed"]
 [connection signal="timeout" from="ClickerTest/AutoClicker" to="ClickerTest" method="_on_AutoClicker_timeout"]
+[connection signal="pressed" from="Note/Button" to="Welcome" method="_on_Button_pressed"]
+[connection signal="pressed" from="Note/Button" to="Note" method="_on_OK_pressed"]
+[connection signal="timeout" from="Note/Timer" to="Note" method="_on_Timer_timeout"]

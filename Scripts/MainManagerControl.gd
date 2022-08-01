@@ -15,6 +15,8 @@ onready var settings_usage = $VBoxContainer/SettingsUsage
 onready var browser_usage = $VBoxContainer/BrowserUsage
 onready var music_usage = $VBoxContainer/MusicPlayerUsage
 onready var mypc_usage = $VBoxContainer/myPCUsage
+onready var store_usage = $VBoxContainer/StoreUsage
+onready var clicker_usage = $VBoxContainer/ClickerUsage
 
 var usage = 0
 # Called when the node enters the scene tree for the first time.
@@ -48,3 +50,9 @@ func _on_MusicPlayer_timeout():
 	
 func _on_MyPC_timeout():
 	update_usage(mypc_usage,200,"MG")
+
+func _on_Store_timeout():
+	update_usage(store_usage,600,"MG")
+
+func _on_ClickerGame_timeout():
+	update_usage(clicker_usage,500,"MG")

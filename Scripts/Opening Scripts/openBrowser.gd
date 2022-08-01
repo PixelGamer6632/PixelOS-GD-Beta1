@@ -32,8 +32,9 @@ func _pressed():
 	all_app_menu.visible = false
 	if times_opened == 1:
 		tm_options.add_item("Pixel Browser")
-	if warned == 0:
 		tabs_popup.visible = true
+	else:
+		tabs_popup.visible = false
 	if search_engine == "eveulu search":
 		eveulusearch_bar.visible = true
 		eveulusearch_button.visible = true

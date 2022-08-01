@@ -1,4 +1,4 @@
-extends ConfirmationDialog
+extends WindowDialog
 
 
 # Declare member variables here. Examples:
@@ -21,7 +21,15 @@ func _on_Button2_pressed():
 	selected_site = "Source"
 
 func _on_WebWarning_confirmed():
+	pass
+
+
+func _on_OK_pressed():
 	if selected_site == "Source":
 		OS.shell_open("https://github.com/PixelGamer6632/PixelOS-GD-Beta1")
 	elif selected_site == "Repository":
 		OS.shell_open("https://github.com/PixelGamer6632/PixelOS-GD-Beta1")
+
+
+func _on_Cancel_pressed():
+	self.visible = false

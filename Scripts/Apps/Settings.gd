@@ -1,6 +1,6 @@
 extends WindowDialog
 
-onready var dock = get_node("/root/Control/HBoxContainer")
+onready var dock = get_node("/root/Control/Dock")
 onready var taskbar = get_node("/root/Control/HBoxContainer3")
 onready var taskbar2 = get_node("/root/Control/VBoxContainer")
 
